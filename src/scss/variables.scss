@@ -1,0 +1,39 @@
+$base-green: #476200;
+$soft-black: #1C1C1C;
+
+//--------DEVICE SIZE--------
+$small-mobile: 400px;
+$tablet-width: 648px;
+$desktop-width: 1023px;
+$container-width: 1200px;
+
+@mixin small-mobile {
+  @media (max-width: $small-mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin container {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$container-width}) {
+    @content;
+  }
+}

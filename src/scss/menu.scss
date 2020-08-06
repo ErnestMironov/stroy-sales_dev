@@ -1,0 +1,28 @@
+.menu {
+    color: white;
+    display: flex;
+    background-color: $base-green;
+    padding: 23px 60px;
+
+    @include container {
+        padding: 23px 50px;
+    }
+
+    &__item {
+        margin-right: 36px;
+        list-style: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            font-size: 1.125rem;
+            line-height: 1.5625rem;
+            text-transform: uppercase;
+        }
+    }
+}
