@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.pug",
+  "homepage": "https://ernestmironov.github.io/stroy-sales_dev/",
   "scripts": {
     "clean": "rm dist",
     "start": "parcel src/index.pug --open",
