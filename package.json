@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm dist",
     "start": "parcel src/index.pug --open",
-    "build-prod": "parcel build src/index.pug --public-url /stroy-sales_dev --no-content-hash"
+    "build-prod": "parcel build src/index.pug --public-url /stroy-sales_dev/dist --no-content-hash"
   },
   "dependencies": {
     "autoprefixer": "^9.8.2",
