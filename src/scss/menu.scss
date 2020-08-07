@@ -1,15 +1,12 @@
 .menu {
-    color: white;
+    color: #2B2A29;
     display: flex;
-    background-color: $base-green;
-    padding: 23px 60px;
-
-    @include container {
-        padding: 23px 50px;
-    }
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 25px;
 
     &__item {
-        margin-right: 36px;
+        margin-right: 35px;
         list-style: none;
 
         &:last-child {
@@ -19,10 +16,6 @@
         a {
             text-decoration: none;
             color: inherit;
-            font-weight: bold;
-            font-size: 1.125rem;
-            line-height: 1.5625rem;
-            text-transform: uppercase;
         }
     }
 }
