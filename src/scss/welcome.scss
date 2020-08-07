@@ -1,0 +1,58 @@
+.welcome {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    &__instruments {
+        margin-left: 26px;
+        transition: ease-out .2s;
+
+        &:hover {
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.205));
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 3.4rem;
+        line-height: 64px;
+        padding-top: 10px;
+    }
+
+    &__sales {
+        display: block;
+        font-weight: 400;
+        padding-left: 70px;
+        margin-top: 20px;
+        display: block;
+    }
+
+    &__percent {
+        font-weight: bold;
+        position: relative;
+
+        &:after {
+            content: '\204e';
+            position: absolute;
+            top: -46%;
+            left: 95%;
+            font-size: 20px;
+            font-family: Tahoma;
+            font-style: italic;
+        }
+
+        &_double {
+            &:after {
+                content: '\204e\204e';
+
+            }
+        }
+    }
+
+    &__title-bottom {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 20px;
+    }
+}

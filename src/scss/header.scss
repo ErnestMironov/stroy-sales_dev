@@ -3,8 +3,6 @@
     position: relative;
 
     .container {
-        position: relative;
-        z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: stretch;
@@ -14,12 +12,13 @@
         content: '';
         background: $yellow;
         top: 0;
-        left: 25px;
+        left: 40px;
         width: 130vw;
-        height: 1338px;
+        height: 1050px;
         transform: rotate(-7deg) translateY(-50%);
         border-bottom-left-radius: 100px;
         position: absolute;
+        z-index: -1;
     }
 
     &__hot {
@@ -75,13 +74,13 @@
         line-height: 20px;
     }
 
-    &_mail {
+    &__mail {
         font-weight: 300;
         font-size: 16px;
         line-height: 25px;
     }
 
     &__callback {
-        margin-top: 16px;
+        margin-top: 7px;
     }
 }

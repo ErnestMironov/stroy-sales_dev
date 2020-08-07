@@ -3,6 +3,7 @@
 
 html {
     font-size: 15px;
+    color: $soft-black;
 
     @include container {
         font-size: 14px;
@@ -28,3 +29,4 @@ body {
 @import 'scss/header.scss';
 @import 'scss/menu.scss';
 @import 'scss/footer.scss';
+@import 'scss/welcome.scss';

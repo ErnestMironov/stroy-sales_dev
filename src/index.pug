@@ -3,4 +3,15 @@ html(lang="en")
     include pug/blocks/head.pug
     body
         include pug/blocks/header.pug 
+        main(class="main-page")
+            div(class="welcome container")
+                div(class="welcome__left")
+                    h1(class="welcome__title") СТРОИТЕЛЬНЫЙ ДИСКОНТ
+                        span(class="welcome__sales") Скидки от 
+                            span(class="welcome__percent") 5%
+                            span  до 
+                            span(class="welcome__percent welcome__percent_double") 40% 
+                        span(class="welcome__title-bottom") На строительные материалы от заводов, производств и магазинов.
+                a(class="welcome__instruments", href="!#")
+                    img(src="img/icons/instruments.svg", alt="видео о компании")
         include pug/blocks/footer.pug 
