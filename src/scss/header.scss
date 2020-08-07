@@ -35,28 +35,28 @@
     &__logo {
         display: block;
         margin-top: 28px;
+    }
+    
+    &__middle {
+        flex: auto;
+        padding-left: 57px;
+        padding-bottom: 10px;
+        align-self: flex-end;
         position: relative;
-
+    
         &:before {
             content: '';
             display: block;
             border: 42px solid transparent;
             border-left: 130vw solid #FFF;
-            left: 600px;
+            left: 50%;
             bottom: 0;
             transform: translate(-50%, 23%);
             z-index: -1;
             position: absolute;
         }
     }
-
-    &__middle {
-        flex: auto;
-        padding-left: 57px;
-        padding-bottom: 10px;
-        align-self: flex-end;
-    }
-
+    
     &__right {
         display: flex;
         flex-direction: column;
