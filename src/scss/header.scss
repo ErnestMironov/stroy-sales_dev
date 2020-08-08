@@ -39,7 +39,7 @@
     &__middle {
         flex: auto;
         padding-left: 57px;
-        padding-bottom: 10px;
+        margin-bottom: 10px;
         align-self: flex-end;
         position: relative;
     
@@ -49,8 +49,8 @@
             border: 42px solid transparent;
             border-left: 130vw solid #FFF;
             left: 50%;
-            bottom: 0;
-            transform: translate(-50%, 23%);
+            top: 50%;
+            transform: translate(-50%, -50%);
             z-index: -1;
             position: absolute;
         }

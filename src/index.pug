@@ -12,6 +12,18 @@ html(lang="en")
                             span  до 
                             span(class="welcome__percent welcome__percent_double") 40% 
                         span(class="welcome__title-bottom") На строительные материалы от заводов, производств и магазинов.
+                    form(class="search welcome__search")
+                        select(name="categories", class="js-example-basic-single search__select")
+                            option(value="Все категории", class="search__select-option") Все категории
+                            option(value="Электрика", class="search__select-option") Электрика
+                            option(value="Материалы", class="search__select-option") Материалы
+                            option(value="Электрика", class="search__select-option") Электрика
+                            option(value="Материалы", class="search__select-option") Материалы
+                            option(value="Электрика", class="search__select-option") Электрика
+                            option(value="Материалы", class="search__select-option") Материалы
+                        input(type="text", class="search__field", placeholder="Начните вводить нужную категорию ...")
+                        button(class="button search__find", type="submit")
+                            img(src="img/icons/search.svg", alt="Искать")
                 a(class="welcome__instruments", href="!#")
                     img(src="img/icons/instruments.svg", alt="видео о компании")
         include pug/blocks/footer.pug 
