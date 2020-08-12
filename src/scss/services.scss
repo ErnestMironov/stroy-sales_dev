@@ -18,6 +18,13 @@
         justify-content: space-between;
         color: inherit;
         text-decoration: none;
+
+        @for $i from 1 through 6 {
+            $delay: random(5) + random(100)/100 + s;
+            &:nth-of-type(#{$i}) .services-block__percent{
+                animation: pulse 8s $delay ease-in-out infinite;
+            }
+        }
     }
 
     &__subtitle {
@@ -68,5 +75,20 @@
             bottom: 50%;
             border-radius: 50%;
         }
+    }
+}
+
+
+@keyframes pulse {
+
+    0%,
+    20%,
+    40% {
+        transform: scale(1);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.1);
     }
 }
