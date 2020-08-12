@@ -14,11 +14,13 @@
     }
 
     &__cat-icon {
-        width: 30%;
-        padding-bottom: 30%;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
         background-color: $yellow;
         border-radius: 50%;
         position: relative;
+        z-index: 1;
 
         img {
             position: absolute;
@@ -35,30 +37,36 @@
     &__cat-title {
         display: inline-flex;
         margin-left: -20px;
+        color: #FFF;
+        text-decoration: none;
+        position: relative;
+        z-index: -1;
+        max-width: 70%;
 
         h2 {
             background-color: $soft-black;
-            font-size: 25px;
-            line-height: 24px;
+            font-size: 15px;
+            line-height: 20px;
             font-weight: 300;
             display: inline;
             padding: 6px 17px 9px 47px;
 
-            a {
-                color: #FFF;
-                text-decoration: none;
+            @include container {
+                padding: 6px 17px 9px 31px;
             }
         }
 
         &:after {
             content: '';
             display: block;
-            height: 39px;
+            height: 100%;
             transform: skewX(-20deg);
             background-color: $soft-black;
-            width: 30px;
+            width: 38px;
             border-radius: 7px;
-            margin-left: -12px;
+            position: absolute;
+            right: -20px;
+            top: 0;
         }
 
         &_reverse:after {
@@ -69,6 +77,10 @@
     &__subcats-list-wrap {
         padding-left: 35%;
         margin-top: -15px;
+
+        @include container {
+            margin-top: -5px;
+        }
     }
 
     &__subcats-list {
@@ -108,7 +120,7 @@
         font-size: 15px;
         line-height: 15px;
         display: flex;
-        
+
         &:before {
             content: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.99994 5L-7.54769e-05 1.00001L0.707031 0.292908L4.49994 4.5L3.99994 5Z' fill='%232B2A29'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.2425 0.999958L3.99985 4.99997L3.49988 4.5L7.5354 0.292851L8.2425 0.999958Z' fill='%232B2A29'/%3E%3C/svg%3E%0A");
             margin-right: 3px;
@@ -121,7 +133,7 @@
             margin-top: 3px;
         }
     }
-    
+
     &__more {
         margin: 48px auto 0;
         display: block;

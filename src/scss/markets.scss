@@ -1,3 +1,61 @@
 .markets-block {
     margin-top: 72px;
+
+    &__grid {
+        margin-top: 73px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        grid-gap: 45px 40px;
+    }
+
+    &__item {
+        position: relative;
+        width: 40%;
+        padding-bottom: 40%;
+        border-radius: 50%;
+        background-color: $yellow;
+
+        &:hover {
+            .markets-block__icon {
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &__percent {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fff;
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $soft-black;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+
+        &_red {
+            background-color: $red;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 50%;
+        left: 35%;
+        transform: translateY(50%);
+        max-width: 180%;
+        transition: ease-out .18s;
+    }
+
+    &__more {
+        margin: 64px auto 0;
+        display: block;
+    }
 }
