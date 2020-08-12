@@ -118,7 +118,8 @@
 .select2-container--open .select2-dropdown--above {
     border-bottom: none;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0
+    border-bottom-right-radius: 0;
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.18);
 }
 
 .select2-container--open .select2-dropdown--below {
@@ -204,8 +205,8 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 100%;
     position: absolute;
-    top: 1px;
-    right: 1px;
+    right: 0;
+    top: 0;
     width: 20px
 }
 

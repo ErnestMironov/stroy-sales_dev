@@ -1,3 +1,5 @@
+$txt-offset: 20px;
+
 .welcome {
     margin-top: 50px;
     display: flex;
@@ -53,7 +55,62 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 24px;
-        padding-left: 20px;
+        padding-left: $txt-offset;
+    }
+
+    &__footer-txt {
+        padding-left: $txt-offset;
+        margin-top: 15px;
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__txt-info {
+        font-style: italic;
+        font-size: 12px;
+        line-height: 19px;
+        padding-left: 10px;
+    }
+
+    &__discount {
+        padding: 15px 23px;
+        border-radius: 0px 50px;
+        background: #C8281C;
+        color: #FFF;
+        display: inline-flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: $txt-offset;
+        margin-bottom: 12px;
+    }
+
+    &__discount-title {
+        font-weight: bold;
+        font-size: 38px;
+    }
+
+    &__discount-txt {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 20px;
+        margin-top: 4px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__discount-bold-txt {
+        font-size: 35px;
+        line-height: 24px;
+        color: $yellow;
+        margin-left: 9px;
+    }
+
+    &__discount-btn {
+        position: absolute;
+        right: -60px;
+        bottom: 0;
+        transform: translateY(50%);
     }
 }
 
@@ -62,7 +119,7 @@
     align-items: stretch;
     justify-content: space-between;
     margin-top: 36px;
-    padding: 0px 5px 0 20px;
+    padding: 0px 5px 0 $txt-offset;
 
     .select2-selection--single {
         display: flex;
@@ -72,6 +129,7 @@
         line-height: 14px;
         color: #000;
         min-width: 175px;
+        position: relative;
 
         &::before {
             content: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.764 0.0451624C11.6432 -0.0153796 11.5009 -0.0153796 11.3801 0.0451624L0.237581 5.61641C0.0259223 5.72235 -0.0597807 5.97979 0.0461365 6.19145C0.106427 6.31193 0.219878 6.39705 0.352412 6.42123L4.77469 7.22563L5.57909 11.6479C5.61201 11.8292 5.75715 11.9692 5.9395 11.9955C5.95967 11.9984 5.98001 11.9998 6.00035 11.9998C6.16279 11.9998 6.31129 11.9081 6.38391 11.7628L11.9552 0.620274C12.0612 0.408666 11.9756 0.15118 11.764 0.0451624Z' fill='black'/%3E%3C/svg%3E%0A");
@@ -85,16 +143,22 @@
     &__field {
         flex: 1;
         margin: 0px 10px;
-        padding: 20px 18px;
+        padding: 18px;
         border: 0;
         border-radius: 4px;
         font: inherit;
-        
+        transition: all ease-out 0.15s;
+
         &::placeholder {
             font-weight: 300;
             font-size: 14px;
             line-height: 14px;
             color: #7E7E7E;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 5px 1px #98989857;
         }
     }
 

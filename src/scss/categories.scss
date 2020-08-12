@@ -1,0 +1,97 @@
+.categories-block {
+    margin-top: 104px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px 20px;
+        margin-top: 16px;
+    }
+
+    &__cat-name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__cat-icon {
+        width: 30%;
+        padding-bottom: 30%;
+        background-color: $yellow;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 70%;
+            width: 70%;
+            object-position: center;
+            object-fit: contain;
+        }
+    }
+
+    &__cat-title {
+        display: inline-flex;
+        margin-left: -20px;
+
+        h2 {
+            background-color: $soft-black;
+            font-size: 25px;
+            line-height: 24px;
+            font-weight: 300;
+            display: inline;
+            padding: 6px 17px 9px 47px;
+            
+            a{
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 39px;
+            transform: skewX(-20deg);
+            background-color: $soft-black;
+            width: 30px;
+            border-radius: 7px;
+            margin-left: -12px;
+        }
+
+        &_reverse:after {
+            transform: skewX(20deg);
+        }
+    }
+
+    &__subcats-list {
+        padding-left: 35%;
+        margin-top: -15px;
+    }
+
+    &__subcat {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 15px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: flex-start;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.5' cy='4.5' r='2.5' fill='%23FFED00'/%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%232B2A29'/%3E%3C/svg%3E%0A");
+            margin-right: 4px;
+            margin-top: -2px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

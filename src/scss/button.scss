@@ -1,11 +1,12 @@
 .button {
     color: #FFFFFF;
+    font: inherit;
     font-weight: bold;
     font-size: 13px;
     line-height: 25px;
     text-align: center;
     padding: 7px 22px;
-    border-radius: 0;
+    border: 0;
     background-color: $green;
     position: relative;
     cursor: pointer;
