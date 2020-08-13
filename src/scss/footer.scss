@@ -21,10 +21,12 @@
         border-bottom: 1px solid #fff;
         padding-bottom: 27px;
         display: flex;
+        align-items: flex-end;
     }
 
     &__left {
         width: 50%;
+        max-width: 561px;
     }
 
     &__info {
@@ -66,7 +68,7 @@
 
     &__info-bottom {
         background-color: $yellow;
-        padding: 27px 16px;
+        padding: 27px 19px;
         text-align: center;
         font-size: 17px;
 
@@ -81,7 +83,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    
+
     &__subscribe {
         display: flex;
         align-items: center;
@@ -138,6 +140,98 @@
 
         &:hover {
             background-color: darken($green, 10%);
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 25px;
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        color: #fff;
+    }
+
+    &__menu {
+        ul {
+            margin-top: 22px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    &__menu-item {
+        font-size: 12px;
+
+        &:before {
+            content: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.5' cy='4.5' r='2.5' fill='%23FFED00'/%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='white'/%3E%3C/svg%3E%0A");
+            margin-right: 5px;
+        }
+
+        &+.footer__menu-item {
+            margin-top: 24px;
+        }
+    }
+
+    &__contacts {
+        ul {
+            margin-top: 22px;
+        }
+    }
+
+    &__contacts-item {
+        display: flex;
+        align-items: center;
+
+        &+.footer__contacts-item {
+            margin-top: 9px;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+
+        a {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 20px;
+            color: $yellow;
+            text-decoration: none;
+        }
+    }
+
+    &__apps {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    &__apps-soon {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        background: rgba(255, 237, 0, 0.9);
+        border-radius: 10px;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__app-icon {
+        &:last-of-type {
+            margin-top: 5px;
         }
     }
 }
