@@ -8,7 +8,7 @@
         margin-top: 16px;
 
         &_short {
-            .categories-block__grid-item:nth-of-type(n+10){
+            .categories-block__grid-item:nth-of-type(n+10) {
                 display: none;
             }
         }
@@ -17,6 +17,13 @@
     &__cat-name {
         display: flex;
         align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            .categories-block__cat-icon {
+                transform: translateX(5px);
+            }
+        }
     }
 
     &__cat-icon {
@@ -27,6 +34,7 @@
         border-radius: 50%;
         position: relative;
         z-index: 1;
+        transition: all ease-out .18s;
 
         img {
             position: absolute;
@@ -83,6 +91,8 @@
     &__subcats-list-wrap {
         padding-left: 35%;
         margin-top: -15px;
+        position: relative;
+        z-index: 1;
 
         @include container {
             margin-top: -5px;
@@ -144,7 +154,7 @@
         margin: 48px auto 0;
         display: block;
 
-        &.active{
+        &.active {
             background-color: $red;
         }
     }
