@@ -1,0 +1,143 @@
+.footer {
+    padding-top: 128px;
+    padding-bottom: 122px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        background: #2B2A29;
+        top: 0;
+        right: 30px;
+        width: 130vw;
+        height: 700px;
+        transform: rotate(-7deg) translateY(27%);
+        border-radius: 100px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .container {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 27px;
+        display: flex;
+    }
+
+    &__left {
+        width: 50%;
+    }
+
+    &__info {
+        box-shadow: -4px -4px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    &__info-top {
+        padding: 35px 39px 24px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-links {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__info-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__info-tel {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    &__info-mail {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__info-bottom {
+        background-color: $yellow;
+        padding: 27px 16px;
+        text-align: center;
+        font-size: 17px;
+
+        b {
+            font-weight: bold;
+        }
+    }
+
+    &__mailing {
+        margin-top: 37px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__subscribe {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        flex: 1;
+        position: relative;
+    }
+
+    &__subscribe-txt {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        max-width: 180px;
+        color: #fff;
+    }
+
+    &__subscribe-field-wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__subscribe-field {
+        background: #FFFFFF;
+        border: 1px solid rgba(34, 34, 34, 0.25);
+        box-shadow: 0px 20px 30px rgba(34, 34, 34, 0.07);
+        border-radius: 50px;
+        font: inherit;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 15px 50px 15px 15px;
+        margin-left: 15px;
+        flex: 1;
+
+        &::placeholder {
+            color: rgba(34, 34, 34, 0.2);
+        }
+    }
+
+    &__subscribe-btn {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background-color: $green;
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+        transition: ease-in-out .18s;
+
+        &:hover {
+            background-color: darken($green, 10%);
+        }
+    }
+}

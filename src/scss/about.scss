@@ -5,12 +5,10 @@
         display: grid;
         grid-template-columns: minmax(65%, 800px) minmax(30%, 400px);
         grid-column-gap: 20px;
+        align-items: center;
         margin-top: 94px;
     }
 
-    &__list {
-        width: 800px;
-    }
 
     &__list-item {
         &+.about-block__list-item {
@@ -63,5 +61,9 @@
         font-size: 15px;
         line-height: 15px;
         max-width: 600px;
+    }
+
+    &__banner {
+        max-width: 100%;
     }
 }
