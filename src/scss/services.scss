@@ -76,6 +76,20 @@
             border-radius: 50%;
         }
     }
+
+    &__actions {
+        margin-top: 67px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        min-width: 188px;
+
+        & + .services-block__btn {
+            margin-left: 14px;
+        }
+    }
 }
 
 

@@ -18,18 +18,8 @@
         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.281);
     }
 
-    &_green {
-        border: 2px solid $yellow;
+    &_yellow {
         background-color: $yellow;
-        transition: all ease-out .2s;
-
-        &::after,
-        &::before {
-            display: none;
-        }
-
-        &:hover {
-            background-color: darken($yellow, 10%);
-        }
+        color: $soft-black;
     }
 }
