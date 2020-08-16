@@ -2,10 +2,20 @@
     padding-top: 10px;
     position: relative;
 
+    @include mobile {
+        padding-top: 20px;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+
+        @include mobile {
+            background: #fff;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
     }
 
     &:before {
@@ -19,11 +29,23 @@
         border-bottom-left-radius: 100px;
         position: absolute;
         z-index: -1;
+
+        @include mobile {
+            width: 100vw;
+            left: 0;
+            transform: unset;
+            border-radius: 0;
+            height: 878px;
+        }
     }
 
     &__hot {
         display: flex;
         align-items: flex-end;
+
+        @include mobile {
+            margin-top: 8px;
+        }
 
         b {
             font-weight: bold;
@@ -34,15 +56,29 @@
     &__logo {
         display: block;
         margin-top: 28px;
+
+        img {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            max-width: 50vw;
+        }
     }
-    
+
     &__middle {
         flex: auto;
         padding-left: 57px;
         margin-bottom: 10px;
         align-self: flex-end;
         position: relative;
-    
+
+        @include mobile {
+            padding-left: 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
         &:before {
             content: '';
             display: block;
@@ -53,14 +89,22 @@
             transform: translate(-50%, -50%);
             z-index: -1;
             position: absolute;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
-    
+
     &__right {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 5px;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__link {

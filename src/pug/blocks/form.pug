@@ -1,19 +1,19 @@
 div(class="form__wrapper form__wrapper_simple")
-    form(class="form")
+    form(class="form", id="form-contact", method="POST")
         img(src="img/icons/times.svg", alt="закрыть", class="form__close")
         h3(class="form__title") 
         div(class="form__actions")
-            input(type="text", class="form__input", placeholder="Имя")
-            input(type="email", class="form__input", placeholder="E-mail")
-            input(type="tel", class="form__input", placeholder="Телефон")
-            input(type="text", class="form__input dinamic-input", placeholder="")
-            button(class="form__submit") ОТПРАВИТЬ
+            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="email",name="email", class="form__input", placeholder="E-mail")
+            input(type="tel",name="tel", class="form__input", placeholder="Телефон")
+            input(type="text",name="text", class="form__input dinamic-input", placeholder="")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
             a(href="javascript:;") Пользовательского соглашения 
             span и
             a(href="javascript:;")  Политики конфиденциальности
 div(class="form__wrapper form__wrapper_cat")
-    form(class="form")
+    form(class="form", id="form-cat", method="POST")
         img(src="img/icons/times.svg", alt="закрыть", class="form__close")
         div(class="form__bonus") ПОЛУЧИТЬ ДОПОЛНИТЕЛЬНУЮ СКИДКУ
         div(class="form__cat-name")
@@ -22,11 +22,11 @@ div(class="form__wrapper form__wrapper_cat")
             h3(href="javascript:;", class="form__cat-title") Общестроительные материалы
         div(class="form__subcat") 
         div(class="form__actions")
-            input(type="text", class="form__input", placeholder="Имя")
-            input(type="email", class="form__input", placeholder="E-mail")
-            input(type="tel", class="form__input", placeholder="Телефон")
-            input(type="text", class="form__input dinamic-input", placeholder="")
-            button(class="form__submit") ОТПРАВИТЬ
+            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="email", name="email", class="form__input", placeholder="E-mail")
+            input(type="tel", name="tel", class="form__input", placeholder="Телефон")
+            input(type="text", name="text", class="form__input dinamic-input", placeholder="Комментарий")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
             a(href="javascript:;") Пользовательского соглашения 
             span и

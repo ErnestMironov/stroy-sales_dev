@@ -1,16 +1,16 @@
 const form = function () {
-    $(`[data-form]`).each(function () {
-        let title = $(this).data(`form`);
-        let placeholder = $(this).data(`form-placeholder`) || `Комментарий`;
+    $(`body`).on('click', `[data-form]`, function () {
+        const $this = $(this).closest(`[data-form]`);
+        let title = $($this).data(`form`);
+        let placeholder = $($this).data(`form-placeholder`) || `Комментарий`;
         let $formWrap = $('.form__wrapper_simple');
         let $form = $formWrap.find(".form");
         let $input = $form.find(`.dinamic-input`);
-        $(this).click(() => {
-            $formWrap.addClass('show')
-            $form.find(`h3`).text(title)
-            $input.attr('placeholder', placeholder)
-            console.log(title, placeholder)
-        })
+
+        $formWrap.addClass('show')
+        $form.find(`h3`).text(title)
+        $input.attr('placeholder', placeholder)
+        console.log(title, placeholder)
     })
 
     function closeForm() {

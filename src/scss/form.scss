@@ -1,5 +1,6 @@
 .form {
     width: 435px;
+    max-width: 100%;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -7,6 +8,11 @@
     padding: 32px 0;
     transform: translateY(-100vh);
     transition: all ease-out .2s;
+
+    @include mobile {
+        padding: 42px 0px 32px;
+    }
+
 
     &:before {
         content: "";
@@ -38,6 +44,11 @@
         top: 10px;
         right: 14px;
         cursor: pointer;
+
+        @include mobile {
+            width: 15px;
+            height: 15px;
+        }
     }
 
     &__wrapper {
@@ -54,6 +65,15 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity ease-out .2s;
+
+        @include mobile {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        @media screen and (max-height: 490px) {
+            align-items: flex-start;
+        }
 
         &.show {
             visibility: visible;

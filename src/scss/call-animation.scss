@@ -1,0 +1,60 @@
+.call-animation {
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: solid 5px #fff;
+    animation: play 2s ease infinite;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: inline-block;
+    position: fixed;
+    z-index: 12;
+    bottom: 10vh;
+    right: 5vw;
+
+    @include mobile {
+        width: 60px;
+        height: 60px;
+        border: solid 3px #fff;
+    }
+    
+    &__img-circle {
+        max-width: 100%;
+        animation: vibro 2s ease infinite;
+    }
+}
+
+@keyframes play {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        box-shadow: 0 0 0 5px rgba(36, 161, 10, 0.4);
+    }
+
+    25% {
+        box-shadow: 0 0 0 10px rgba(36, 161, 10, 0.4), 0 0 0 20px rgba(36, 161, 10, 0.2);
+    }
+
+    25% {
+        box-shadow: 0 0 0 15px rgba(36, 161, 10, 0.4), 0 0 0 30px rgba(36, 161, 10, 0.2);
+    }
+
+}
+
+@keyframes vibro {
+
+    0%,18% {
+        transform: rotate(-8deg);
+    }
+
+    9% {
+        transform: rotate(8deg);
+
+    }
+
+}

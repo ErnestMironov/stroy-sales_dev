@@ -4,22 +4,68 @@
     &__grid {
         margin-top: 73px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         justify-content: space-between;
         grid-gap: 45px 40px;
+
+        @include mobile {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+
+    &__slider {
+        @include mobile {
+            margin-top: 40px;
+
+            .swiper-slide {
+                padding: 10px 0;
+                width: 120px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    
+    &__nav {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &__arrow {
+        min-width: 50px;
+        min-height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.075);
+
+        &:after {
+            transform: scale(.6);
+            color: black;
+        }
     }
 
     &__item {
         position: relative;
-        width: 40%;
-        padding-bottom: 40%;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         background-color: $yellow;
+        display: block;
 
         &:hover {
             .markets-block__icon {
                 margin-left: -5px;
             }
+        }
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
@@ -52,6 +98,14 @@
         transform: translateY(50%);
         max-width: 180%;
         transition: ease-out .18s;
+
+        @include mobile {
+            max-width: 120%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            transform: unset;
+        }
     }
 
     &__more {

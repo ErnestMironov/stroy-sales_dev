@@ -3,7 +3,7 @@
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-gap: 49px 39px;
         margin-top: 59px;
     }
@@ -21,7 +21,8 @@
 
         @for $i from 1 through 6 {
             $delay: random(5) + random(100)/100 + s;
-            &:nth-of-type(#{$i}) .services-block__percent{
+
+            &:nth-of-type(#{$i}) .services-block__percent {
                 animation: pulse 8s $delay ease-in-out infinite;
             }
         }
@@ -37,6 +38,10 @@
         color: #fff;
         border-radius: 20px 0 0 0;
         text-transform: uppercase;
+
+        @include mobile {
+            font-size: 20px;
+        }
     }
 
     &__discount {
@@ -81,13 +86,24 @@
         margin-top: 67px;
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__btn {
         min-width: 188px;
 
-        & + .services-block__btn {
+
+        &+.services-block__btn {
             margin-left: 14px;
+
+            @include mobile {
+                margin-left: 0;
+                margin-top: 14px;
+            }
         }
     }
 }

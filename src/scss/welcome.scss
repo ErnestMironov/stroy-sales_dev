@@ -1,13 +1,27 @@
 $txt-offset: 20px;
 
+
 .welcome {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
 
+    @include mobile {
+        display: block;
+        margin-top: 25px;
+    }
+
     &__instruments {
         margin-left: 26px;
         transition: ease-out .2s;
+
+        @include mobile {
+            margin-left: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
 
         &:hover {
             filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.205));
@@ -19,6 +33,12 @@ $txt-offset: 20px;
         font-size: 3.4rem;
         line-height: 64px;
         padding-top: 10px;
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 28px;
+            text-align: center;
+        }
     }
 
     &__sales {
@@ -27,6 +47,11 @@ $txt-offset: 20px;
         padding-left: 70px;
         margin-top: 20px;
         display: block;
+
+        @include mobile {
+            padding: 0;
+            font-size: 22px;
+        }
     }
 
     &__percent {
@@ -41,6 +66,11 @@ $txt-offset: 20px;
             font-size: 20px;
             font-family: Tahoma;
             font-style: italic;
+
+            @include mobile {
+                padding: 0;
+                font-size: 14px;
+            }
         }
 
         &_double {
@@ -56,6 +86,12 @@ $txt-offset: 20px;
         font-size: 20px;
         line-height: 24px;
         padding-left: $txt-offset;
+
+        @include mobile {
+            padding: 0;
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 
     &__footer-txt {
@@ -64,6 +100,13 @@ $txt-offset: 20px;
         margin-bottom: 4px;
         font-size: 16px;
         line-height: 19px;
+
+        @include mobile {
+            padding: 0;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 30px;
+        }
     }
 
     &__txt-info {
@@ -83,11 +126,21 @@ $txt-offset: 20px;
         position: relative;
         margin-left: $txt-offset;
         margin-bottom: 12px;
+
+        @include mobile {
+            margin: 0;
+            margin-top: 10px;
+            padding-bottom: 30px;
+        }
     }
 
     &__discount-title {
         font-weight: bold;
         font-size: 38px;
+
+        @include mobile {
+            font-size: 22px;
+        }
     }
 
     &__discount-txt {
@@ -97,6 +150,11 @@ $txt-offset: 20px;
         margin-top: 4px;
         display: flex;
         align-items: flex-start;
+
+        @include mobile {
+            flex-wrap: wrap;
+            font-size: 18px;
+        }
     }
 
     &__discount-bold-txt {
@@ -104,6 +162,11 @@ $txt-offset: 20px;
         line-height: 24px;
         color: $yellow;
         margin-left: 9px;
+
+        @include mobile {
+            margin-left: 0;
+            font-size: 20px;
+        }
     }
 
     &__discount-btn {
@@ -111,6 +174,15 @@ $txt-offset: 20px;
         right: -60px;
         bottom: 0;
         transform: translateY(50%);
+        animation: discount-pulse 5s 0s ease-in-out infinite;
+        
+        @include mobile {
+            right: calc(50% - 90px);
+            bottom: -19.5px;
+            transform: unset;
+            width: 180px;
+            animation: discount-pulse_mobile 5s 0s ease-in-out infinite;
+        }
     }
 }
 
@@ -170,5 +242,34 @@ $txt-offset: 20px;
         box-shadow: 0px 6px 6px rgba(255, 128, 24, 0.41);
         border-radius: 4px;
         width: 113px;
+    }
+}
+
+
+@keyframes discount-pulse {
+
+    0%,
+    20%,
+    40% {
+        transform: scale(1) translateY(50%);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.1) translateY(50%);
+    }
+}
+
+@keyframes discount-pulse_mobile {
+
+    0%,
+    20%,
+    40% {
+        transform: scale(1);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.1);
     }
 }

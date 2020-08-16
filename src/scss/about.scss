@@ -1,18 +1,28 @@
 .about-block {
     margin-top: 59px;
 
+
     &__container {
         display: grid;
         grid-template-columns: minmax(65%, 800px) minmax(30%, 400px);
         grid-column-gap: 20px;
         align-items: center;
         margin-top: 94px;
+
+        @include mobile {
+            display: block;
+            margin-top: 39px;
+        }
     }
 
 
     &__list-item {
         &+.about-block__list-item {
             margin-top: 15px;
+
+            @include mobile {
+                margin-top: 35px;
+            }
         }
     }
 
@@ -27,6 +37,12 @@
             padding: 4px 19px 6px 93px;
             border-radius: 15px;
             display: inline-block;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 21px;
+                padding: 4px 19px 6px 87px;
+            }
         }
     }
 
@@ -61,9 +77,18 @@
         font-size: 15px;
         line-height: 15px;
         max-width: 600px;
+
+        @include mobile {
+            padding: 0;
+            margin-top: 20px;
+        }
     }
 
     &__banner {
         max-width: 100%;
+
+        @include mobile {
+            margin-top: 25px;
+        }
     }
 }

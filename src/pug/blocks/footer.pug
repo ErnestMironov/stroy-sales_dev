@@ -11,28 +11,26 @@ footer(class="footer", id="contacts")
                 div(class="footer__info-bottom") <b>Скидочный, строительный сервис StroySales.</b> <br> Мы делаем скидки на стрительные материалы, услуги и магазины!Работаем напрямую с производствами, заводами, магазинами и строительно-ремонтными фирмами и частными предпринимателями в строительной и ремонтной отрасли с 2015 года по Санкт-Петербургу и Л.О.
             form(class="footer__mailing")
                 img(src="img/icons/plane.svg", alt="самолет")
-                div(class="footer__subscribe")
-                    label(class="footer__subscribe-field-wrap")
-                        span(class="footer__subscribe-txt") ПОДПИСАТЬСЯ НА РАССЫЛКУ
-                        input(type="text", placeholder="Телефон или email", class="footer__subscribe-field", required)
-                    button(class="footer__subscribe-btn")
-                        img(src="img/icons/mail.svg", alt="отправить")
+                span(class="footer__subscribe-txt") ПОДПИСАТЬСЯ НА РАССЫЛКУ
+                input(type="text", placeholder="Телефон или email", class="footer__subscribe-field", required)
+                button(class="footer__subscribe-btn")
+                    img(src="img/icons/mail.svg", alt="отправить")
         div(class="footer__right")
             div(class="footer__menu")
                 span(class="footer__subtitle") Меню
                 ul
                     li(class="footer__menu-item")
-                        a(href="javascript:;") Главная
+                        a(href="header") Главная
                     li(class="footer__menu-item")
-                        a(href="javascript:;") Категории
+                        a(href="categories") Категории
                     li(class="footer__menu-item")
-                        a(href="javascript:;") Магазины
+                        a(href="markets") Магазины
                     li(class="footer__menu-item")
-                        a(href="javascript:;") Услуги
+                        a(href="services") Услуги
                     li(class="footer__menu-item")
-                        a(href="javascript:;") О нас
+                        a(href="about") О нас
                     li(class="footer__menu-item")
-                        a(href="javascript:;") Контакты
+                        a(href="contacts") Контакты
             div(class="footer__contacts")
                 span(class="footer__subtitle") Контакты
                 ul 
@@ -44,12 +42,19 @@ footer(class="footer", id="contacts")
                         a(href="mailto:info@stroysales.com") info@stroysales.com
                     li(class="footer__contacts-item")
                         img(src="img/icons/footer/whatsapp.svg", alt="whatsapp")
-                        a(href="https://wa.me/88129801745") 8(812)980-17-45
+                        a(href="https://wa.me/+78129801745") 8(812)980-17-45
                 div(class="footer__apps")
                     div(class="footer__apps-soon") СКОРО!
                     img(src="img/icons/googlePlay.png", alt="google play", class="footer__app-icon")
                     img(src="img/icons/appStore.png", alt="app store", class="footer__app-icon")
 include form.pug 
+a(href="tel:8(812)980-17-45", class="call-animation")
+    img(class="call-animation__img-circle" src="img/icons/call.svg")
 script(src="https://code.jquery.com/jquery-3.5.1.min.js")
 script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js")
 script(src="../src/main.js")
+script(src="./telegramform/js/telegramform.js")
+script(src="../src/js/custom/metrik.js")
+noscript
+    div
+        img(src="https://mc.yandex.ru/watch/59134315" style="position:absolute; left:-9999px;" alt="") 

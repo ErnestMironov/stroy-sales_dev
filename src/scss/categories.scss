@@ -1,15 +1,29 @@
 .categories-block {
     margin-top: 104px;
 
+    @include mobile {
+        margin-top: 45px;
+    }
+
     &__grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         grid-gap: 5px 20px;
         margin-top: 16px;
+
+        @include mobile {
+           padding-right: 0;
+        }
 
         &_short {
             .categories-block__grid-item:nth-of-type(n+10) {
                 display: none;
+            }
+            
+            @include mobile {
+                .categories-block__grid-item:nth-of-type(n+4) {
+                    display: none;
+                }
             }
         }
     }
@@ -36,6 +50,12 @@
         z-index: 1;
         transition: all ease-out .18s;
 
+        @include mobile{
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+        }
+
         img {
             position: absolute;
             top: 50%;
@@ -57,6 +77,11 @@
         z-index: -1;
         max-width: 70%;
 
+        @include mobile {
+            flex: 1;
+            max-width: 100%;
+        }
+
         h2 {
             background-color: $soft-black;
             font-size: 15px;
@@ -67,6 +92,11 @@
 
             @include container {
                 padding: 6px 17px 9px 31px;
+            }
+
+            @include mobile {
+                width: 100%;
+                padding: 6px 17px 9px 30px;
             }
         }
 
@@ -81,6 +111,10 @@
             position: absolute;
             right: -20px;
             top: 0;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &_reverse:after {
@@ -89,13 +123,19 @@
     }
 
     &__subcats-list-wrap {
-        padding-left: 35%;
+        padding-left: 100px;
         margin-top: -15px;
         position: relative;
         z-index: 1;
 
         @include container {
             margin-top: -5px;
+        }
+
+        @include mobile {
+            margin-top: -5px;
+            padding-left: 80px;
+            padding-right: 20px;
         }
     }
 
@@ -114,6 +154,12 @@
         margin-bottom: 5px;
         display: flex;
         align-items: flex-start;
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 4px;
+        }
 
         &:before {
             content: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.5' cy='4.5' r='2.5' fill='%23FFED00'/%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%232B2A29'/%3E%3C/svg%3E%0A");

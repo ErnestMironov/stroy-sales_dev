@@ -1,0 +1,86 @@
+@import url(reset.css);
+body{
+  font: 16px 'Roboto', sans-serif;
+}
+
+.form-element {
+  width: 100%;
+  max-width: 486px;
+  box-sizing: border-box;
+  border: 15px solid #90caf9;
+  padding: 30px;
+  margin: 30px auto;
+  font-weight: 700;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  color: #90caf9;
+}
+
+.form-input__name, .form-input__phone {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  padding: 15px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
+
+.form-input__name:focus, .form-input__phone:focus {
+  border: 1px solid #90caf9;
+}
+.form-input__button {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 24px;
+  background: #90caf9;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form-input__button:hover {
+  box-shadow: 0px 5px 5px #000;
+  box-shadow: 0px 1px 5px rgb(144, 144, 144);
+  background: #90caf9;
+}
+.creator {
+  text-align: center;
+  margin-top: 15px;
+}
+.creator a{
+  color: #dedede;
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {}
+/*Доп запросы*/
+@media only screen and (max-width : 680px) {}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 486px) {
+  .form__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .form-element {
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-input__name, .form-input__phone {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width : 380px) {}

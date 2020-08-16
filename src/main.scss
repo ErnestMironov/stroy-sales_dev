@@ -20,6 +20,10 @@ body {
     display: block;
     margin: auto;
 
+    @include mobile {
+        padding: 0 20px;
+    }
+
     @include container {
         padding-left: 25px;
         padding-right: 25px;
@@ -37,3 +41,4 @@ body {
 @import 'scss/services.scss';
 @import 'scss/about.scss';
 @import 'scss/form.scss';
+@import 'scss/call-animation.scss';
