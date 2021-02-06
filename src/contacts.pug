@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+html(lang="en")
+    include pug/blocks/head.pug
+    body
+        .decor-rect.decor-rect_s
+        include pug/blocks/header.pug 
+        main(class="main-page")
+            .breadcrumbs.container
+                ul.breadcrumbs__list
+                    li.breadcrumbs__list-item  
+                        a(href="/") Главная                        
+                    li.breadcrumbs__list-item  
+                        | Контакты
+                h2.breadcrumbs__page-title КОНТАКТЫ
+            .info-block.info-block_l Вы всегда можете с нами связаться!
+            .contacts.container
+                p.contacts__caption
+                    | Если вы хотите заказать товар или задать вопрос,
+                    br 
+                    | воспользуйтесь контактами ниже или просто позвоните по телефону.
+                .contacts__wrap
+                    .contacts__left 
+                        h3.contacts__subtitle Связаться с нами
+                        ul.contacts__list
+                            li.contacts__list-item
+                                span.contacts__list-title Телефоны:
+                                .contacts__link-wrap
+                                    a.contacts__link(href="tel:+7 (812) 980-17-45") +7 (812) 980-17-45
+                                    a.contacts__link(href="tel: +7 (952) 201-17-45") +7 (952) 201-17-45
+                            li.contacts__list-item
+                                span.contacts__list-title Whatsapp:
+                                a.contacts__link(href="https://wa.me/+79522011745") +7 (952) 201-17-45
+                            li.contacts__list-item
+                                span.contacts__list-title Telegram:
+                                a.contacts__link(href="tg://resolve?domain=<Stroysales>") +7 (952) 201-17-45
+                            li.contacts__list-item
+                                span.contacts__list-title Email:
+                                a.contacts__link(href="mailto:info@stroysales.com") info@stroysales.com
+                        .contacts__adress 
+                            h3.contacts__subtitle НАШ ОФИС ПО АДРЕСУ:
+                            a.contacts__link(href="https://yandex.ru/maps/-/CCUAJ4ChtD") г. Санкт-Петербург, наб.Морская 31
+                    .contacts__right
+                        script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab66e2e781dcae861630becd7a2af6bdc8d2bb6c43e8632a910ffa35cbd1f49f4&amp;lang=ru_RU&amp;scroll=false")
+            .warning
+                | В СВЯЗИ С КОВИД ПОСЕЩЕНИЕ ОФИСА ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ
+            .subtitle 
+                h2.subtitle__title Реквизиты       
+            ul.list.container 
+                li
+                    span Полное официальное наименование предприятия (для печатн. форм. докум.):
+                    span Общество с ограниченной ответственностью "СТАРК"
+                li
+                    span Сокращенное наименование предприятия:
+                    span ООО "СТАРК"
+                li
+                    span Генеральный директор:
+                    span Юнусова Елена Владимировна
+                        br
+                        | Потапея Елизавета Эдуардовна (c 04.05.2020)
+                li
+                    span ИНН:
+                        br
+                        |КПП:
+                    span 7842514200
+                        br
+                        | 781701001
+                li
+                    span ОГРН:
+                    span 1147847066872
+                li
+                    span Юридический адрес:
+                    span 197101, г. Санкт-Петербург, ул. Рентгена, лит. А, пом. 1Н, пом. 19, оф. 102
+            include pug/blocks/about
+        include pug/blocks/footer.pug 

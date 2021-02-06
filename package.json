@@ -1,29 +1,52 @@
 {
-  "name": "SippTrade_dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.pug",
-  "homepage": "https://ernestmironov.github.io/stroy-sales_dev/",
-  "scripts": {
-    "clean": "rm dist",
-    "start": "parcel src/index.pug --open",
-    "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
-    "build-prod": "parcel build src/index.pug  --no-content-hash"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.8.2",
-    "categories": "0.0.1-0",
-    "jquery": "^3.5.1",
-    "js": "^0.1.0",
-    "postcss-modules": "^2.0.0"
-  },
-  "devDependencies": {
-    "inputmask": "^5.0.5",
-    "parcel-bundler": "latest",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "pug": "^3.0.0",
-    "sass": "^1.26.8",
-    "select2": "^4.0.13",
-    "swiper": "^6.1.1"
-  }
+    "name": "SippTrade_dev",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.pug",
+    "homepage": "https://ernestmironov.github.io/stroy-sales_dev/",
+    "scripts": {
+        "clean": "rimraf dist",
+        "start": "parcel src/index.pug --open",
+        "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
+        "build-prod": "parcel build src/index.pug  --no-content-hash"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.8.2",
+        "categories": "0.0.1-0",
+        "jquery": "^3.5.1",
+        "js": "^0.1.0",
+        "postcss-modules": "^2.0.0"
+    },
+    "devDependencies": {
+        "inputmask": "^5.0.5",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-clean-dist": "0.0.6",
+        "parcel-plugin-pwa-manifest": "^3.0.10",
+        "parcel-plugin-workbox-cache": "^2.0.1",
+        "posthtml": "^0.13.4",
+        "posthtml-webp": "^2.1.0",
+        "pug": "^3.0.0",
+        "pxtorem": "^1.0.0",
+        "sass": "^1.26.8",
+        "select2": "^4.0.13",
+        "swiper": "^6.1.1",
+        "workbox": "0.0.0"
+    },
+    "pwaManifest": {
+        "name": "StroySales",
+        "shortName": "StroySales",
+        "start_url": "index.html",
+        "theme": "#ffed00",
+        "background_color": "#FFF",
+        "display": "standalone",
+        "generateIconOptions": {
+            "baseIcon": "src/img/icons/manifest-logo.png",
+            "sizes": [
+                192,
+                384,
+                512
+            ],
+            "genFavicons": true
+        }
+    }
 }

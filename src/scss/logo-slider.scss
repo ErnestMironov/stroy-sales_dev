@@ -1,0 +1,22 @@
+.logo-slider {
+	margin: 90px 0;
+
+	.container {
+		position: relative;
+		padding: 0px 80px;
+
+		@include mobile {
+			padding: 0px 40px;
+		}
+	}
+
+	.swiper-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+		img {
+			max-width: 80%;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.breadcrumbs {
+	padding-top: 70px;
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 16px;
+
+	&__list {
+		display: flex;
+	}
+
+	&__list-item {
+		margin-right: 5px;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: inline-flex;
+			transition: all 0.15s linear;
+
+			&:hover {
+				color: $green;
+			}
+
+			&::after {
+				content: '/';
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&__page-title {
+		font-weight: bold;
+		font-size: 33px;
+		line-height: 40px;
+		text-transform: uppercase;
+		margin-top: 35px;
+
+		@include mobile {
+			font-size: 28px;
+			line-height: normal;
+		}
+	}
+}

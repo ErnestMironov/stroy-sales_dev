@@ -1,0 +1,104 @@
+.contacts {
+	margin-top: 45px;
+
+	& + .warning {
+		margin-top: 82px;
+	}
+
+	&__caption {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 34px;
+		text-align: center;
+
+		@include mobile {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+	&__wrap {
+		margin-top: 70px;
+		display: flex;
+
+		@include mobile {
+			display: block;
+		}
+	}
+	&__left {
+		margin-right: 40px;
+		@include mobile {
+			margin-right: 0;
+		}
+	}
+	&__subtitle {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 34px;
+		text-transform: uppercase;
+		@include mobile {
+			font-size: 24px;
+			line-height: 1.2;
+		}
+	}
+	&__right {
+		flex: auto;
+		@include mobile {
+			margin-top: 15px;
+			height: 180px;
+		}
+	}
+	&__list {
+		margin-top: 30px;
+		&-item {
+			display: flex;
+			@include mobile {
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+		&-title {
+			margin-right: 20px;
+			width: 115px;
+			font-weight: bold;
+			font-size: 15px;
+			line-height: 25px;
+			letter-spacing: 1px;
+			color: #000000;
+		}
+	}
+	&__link {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 1px;
+		color: #c8281c;
+		text-decoration: none;
+		display: block;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 1.2;
+			margin-bottom: 5px;
+		}
+	}
+	&__adress {
+		margin-top: 43px;
+
+		.contacts {
+			&__link {
+				width: max-content;
+				margin-top: 25px;
+
+				@include mobile {
+					width: auto;
+				}
+			}
+			&__subtitle {
+				text-align: center;
+				@include mobile {
+					text-align: left;
+				}
+			}
+		}
+	}
+}

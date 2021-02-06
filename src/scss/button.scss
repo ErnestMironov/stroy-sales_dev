@@ -1,25 +1,27 @@
 .button {
-    color: #FFFFFF;
-    font: inherit;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 25px;
-    text-align: center;
-    padding: 7px 22px;
-    border: 0;
-    background-color: $green;
-    position: relative;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.075);
-    transition: all ease-out .2s;
-    
-    &:hover {
-        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.281);
-    }
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+  padding: 7px 22px;
+  border: 0;
+  background-color: $green;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.075);
+  transition: all ease-out 0.2s;
+  display: inline-block;
+  text-decoration: none;
 
-    &_yellow {
-        background-color: $yellow;
-        color: $soft-black;
-    }
+  &:hover {
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.281);
+  }
+
+  &_yellow {
+    background-color: $yellow;
+    color: $soft-black;
+  }
 }

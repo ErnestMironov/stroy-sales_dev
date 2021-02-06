@@ -1,0 +1,243 @@
+.subtitle {
+	text-align: center;
+	padding: 25px 0;
+
+	&__title {
+		font-size: 30px;
+		line-height: 34px;
+	}
+
+	&__txt {
+		display: block;
+		font-size: 15px;
+		line-height: 23px;
+		padding-top: 20px;
+	}
+
+	// mods
+	&_bg_yellow {
+		background: $yellow;
+	}
+
+	& + .list {
+		margin-top: 60px;
+
+		@include mobile {
+			margin-top: 30px;
+		}
+	}
+}
+
+.simple-txt {
+	margin: 30px 0;
+	font-size: 16px;
+	line-height: 1.4;
+
+	a {
+		text-decoration: none;
+		color: $green;
+	}
+}
+
+.info-block {
+	text-align: center;
+	font-weight: bold;
+	background-color: $yellow;
+	font-size: 22px;
+	line-height: 34px;
+	padding: 31px 20px;
+	@include mobile {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+	.container {
+		max-width: 1340px;
+	}
+	&_l {
+		font-size: 30px;
+		line-height: 34px;
+		text-transform: uppercase;
+		@include mobile {
+			font-size: 20px;
+			line-height: 1.2;
+		}
+	}
+	& + .order-list {
+		margin-top: 79px;
+
+		@include mobile {
+			margin-top: 45px;
+		}
+	}
+	&_green {
+		background-color: transparent;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 0;
+
+		.container {
+			background-color: $green;
+			max-width: calc(#{$container-width} - 50px);
+			padding: 15px 13px;
+		}
+		b {
+			font-weight: 800;
+		}
+	}
+}
+
+.warning {
+	background-color: $red;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 48px 20px;
+
+	@include mobile {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	& + .short-info,
+	& + .subtitle {
+		margin-top: 56px;
+
+		@include mobile {
+			margin-top: 30px;
+		}
+	}
+}
+.list {
+	font-size: 18px;
+
+	@include mobile {
+		font-size: 14px;
+	}
+	li {
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+
+			@include mobile {
+				border-bottom: 1px solid #a7a7a724;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+			}
+		}
+
+		span:first-child {
+			display: flex;
+			width: 300px;
+			flex: 35%;
+			font-weight: bold;
+			margin-right: 20px;
+			@include mobile {
+				width: auto;
+				flex: none;
+				width: 40%;
+				margin-right: 30px;
+			}
+			&::before {
+				content: '—';
+				display: inline-block;
+				margin-right: 10px;
+
+				@include mobile {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.order-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 842px;
+	& + .about-block {
+		margin-top: 100px;
+		@include mobile {
+			margin-top: 45px;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		flex: 100%;
+		@include mobile {
+			align-items: flex-start;
+		}
+		&:not(:last-child) {
+			margin-bottom: 65px;
+			@include mobile {
+				margin-bottom: 35px;
+			}
+		}
+
+		&_m {
+			max-width: 48%;
+
+			@include mobile {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__number {
+		color: #fff;
+		font-weight: 800;
+		font-size: 50px;
+		line-height: 19px;
+		min-width: 70px;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background-color: $red;
+		margin-right: 29px;
+		position: relative;
+
+		@include mobile {
+			font-size: 25px;
+			line-height: normal;
+			min-width: 35px;
+			height: 35px;
+			margin-right: 17px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 86px;
+			height: 86px;
+			border-radius: 50%;
+			background-color: $yellow;
+			z-index: -1;
+
+			@include mobile {
+				width: 43px;
+				height: 43px;
+			}
+		}
+	}
+
+	&__desc {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.3;
+
+		@include mobile {
+			font-size: 14px;
+		}
+	}
+}

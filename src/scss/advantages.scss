@@ -1,0 +1,58 @@
+.advantages {
+	margin-top: 60px;
+
+	&__grid {
+		margin-top: 90px;
+		display: grid;
+		grid-gap: 50px;
+		grid-template-columns: 1fr 1fr;
+		padding-left: 18px;
+
+		@include mobile {
+			display: block;
+			margin-top: 40px;
+			padding-left: 0;
+		}
+	}
+
+	&__grid-item {
+		border-radius: 20px;
+		background-color: $yellow;
+		padding: 18px;
+		position: relative;
+		width: 100%;
+		height: 200px;
+
+		@include mobile {
+			height: 150px;
+			margin-bottom: 85px;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+	&__btn {
+		text-transform: uppercase;
+		position: absolute;
+		left: -18px;
+		bottom: -18px;
+
+		@include mobile {
+			left: 0;
+			bottom: auto;
+			top: calc(100% + 15px);
+			width: 100%;
+		}
+	}
+}

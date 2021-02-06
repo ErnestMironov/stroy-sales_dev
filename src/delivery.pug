@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en")
+    include pug/blocks/head.pug
+    body
+        .decor-rect.decor-rect_s
+        include pug/blocks/header.pug 
+        main(class="main-page")
+            .breadcrumbs.container
+                ul.breadcrumbs__list
+                    li.breadcrumbs__list-item  
+                        a(href="/") Главная                        
+                    li.breadcrumbs__list-item  
+                        | Доставка
+                h2.breadcrumbs__page-title ДОСТАВКА
+            .warning
+                | в связи с КОВИД самовывоз осуществляется по 
+                br
+                |предварительному согласованию времени!       
+            .short-info.container
+                ul.short-info__list
+                    li.short-info__list-item
+                        |Все представленные на сайте позиции находятся на складах в Санкт-Петербурге.
+                    li.short-info__list-item
+                        | Доставка товара осуществляется различным грузовым автотранспортом, что позволяет подобрать машину именно под ваш заказанный объем и не переплачивать.
+            .info-block Покупая утеплители и другие стройматериалы с доставкой по Санкт-Петербургу и Ленинградской обл. у нас, 
+                br
+                |Вы приобретаете оригинальную продукцию от прямого поставщика.
+            .order-list.container
+                .order-list__item.order-list__item_m
+                    .order-list__number 1
+                    .order-list__desc Работаем с производителями напрямую 
+                .order-list__item.order-list__item_m
+                    .order-list__number 2
+                    .order-list__desc Предлагаем гарантированно надежную продукцию.
+                .order-list__item
+                    .order-list__number 3
+                    .order-list__desc На складах соблюдаются все сроки хранения товара. Все ватные утеплители мы поставляем только в упаковках, чтобы не нарушить технические свойства утеплителя. 
+                .order-list__item
+                    .order-list__number 4
+                    .order-list__desc Доставляем заказы по Санкт-Петербургу и Ленинградской области быстро и бережно.
+            include pug/blocks/about
+        include pug/blocks/footer.pug 

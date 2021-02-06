@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 html(lang="en")
-    include pug/blocks/head.pug
+    include pug/blocks/head
     body
-        include pug/blocks/header.pug 
+        .decor-rect
+        include pug/blocks/header
         main(class="main-page")
-            div(class="welcome container")
-                div(class="welcome__left")
-                    h1(class="welcome__title") СТРОИТЕЛЬНЫЙ ДИСКОНТ
-                        span(class="welcome__sales") Скидки от 
-                            span(class="welcome__percent") 5%
-                            span  до 
-                            span(class="welcome__percent welcome__percent_double") 40% 
-                        span(class="welcome__title-bottom") На строительные материалы от заводов, производств и магазинов.
-                    //- form(class="search welcome__search")
-                    //-     select(name="categories", class="js-example-basic-single search__select")
-                    //-         option(value="Все категории", class="search__select-option") Все категории
-                    //-         option(value="Электрика", class="search__select-option") Электрика
-                    //-         option(value="Материалы", class="search__select-option") Материалы
-                    //-         option(value="Электрика", class="search__select-option") Электрика
-                    //-         option(value="Материалы", class="search__select-option") Материалы
-                    //-         option(value="Электрика", class="search__select-option") Электрика
-                    //-         option(value="Материалы", class="search__select-option") Материалы
-                    //-     input(type="text", class="search__field", placeholder="Начните вводить нужную категорию ...")
-                    //-     button(class="button search__find", type="submit")
-                    //-         img(src="img/icons/search.svg", alt="Искать")
-                    picture(class="welcome__discount-img-mobile")
-                        source(type="image/webp"  srcset="img/banners/turtle_mobile.webp")
-                        img(src="img/banners/turtle_mobile.png" alt="Кровля")
-                    div(class="welcome__discount")
-                        div(class="welcome__discount-img")
-                            picture(class="welcome__discount-img-shard")
-                                source(type="image/webp"  srcset="img/banners/turtle_black.webp")
-                                img(src="img/banners/turtle_black.png" alt="Кровля")
-                            picture(class="welcome__discount-img-shard")
-                                source(type="image/webp"  srcset="img/banners/turtle_red.webp")
-                                img(src="img/banners/turtle_red.png" alt="Кровля")
-                            picture(class="welcome__discount-img-shard")
-                                source(type="image/webp"  srcset="img/banners/turtle_grey.webp")
-                                img(src="img/banners/turtle_grey.png" alt="Кровля")
-                        h2(class="welcome__discount-title") ДАЁМ МАКСИМАЛЬНУЮ СКИДКУ НА ВСЮ КРОВЛЮ
-                        span(class="welcome__discount-txt") Не верите, что можно дешевле?
-                            b(class="welcome__discount-bold-txt")  ВЕСЬ СЕНТЯБРЬ
-                        div(class="welcome__discount-btn-wrap")
-                            button(class="button welcome__discount-btn welcome__discount-btn_skeptic", data-form="Не верите нашим ценам?") ДЛЯ СКЕПТИКОВ
-                            button(class="button welcome__discount-btn", data-form="Акция сентября") ХОЧУ СКИДКУ
-                    div(class="welcome__footer-txt") Подбор стройматериалов, мебели и электроинструментов стал простым и выгодным. <br>
-                        span(class="welcome__txt-info") *Гарантированная скидка на любой раздел на сайте, финальная скидка согласовывается по запросу. <br>
-                        span(class="welcome__txt-info") **Для прорабов и фирм действует особое предложение! Уточняйте по телефону или в форме.<br>
-                        span(class="welcome__txt-info") ***Для тех, кто думает, что мы не сможем дешевле, чем они закупаются.
-                //- div(class="welcome__instruments")
-                //-     img(src="img/icons/instruments.svg", alt="видео о компании")
-            include pug/blocks/categories
-            include pug/blocks/markets
-            include pug/blocks/services
+            div(class="welcome")
+                .container
+                    div(class="welcome__left")
+                        h1(class="welcome__title") ПРОДАЖА СТРОИТЕЛЬНЫХ МАТЕРИАЛОВ
+                            br
+                            | ПО ОПТОВЫМ ЦЕНАМ
+                        //- form(class="search welcome__search")
+                        //-     select(name="categories", class="js-example-basic-single search__select")
+                        //-         option(value="Все категории", class="search__select-option") Все категории
+                        //-         option(value="Электрика", class="search__select-option") Электрика
+                        //-         option(value="Материалы", class="search__select-option") Материалы
+                        //-         option(value="Электрика", class="search__select-option") Электрика
+                        //-         option(value="Материалы", class="search__select-option") Материалы
+                        //-         option(value="Электрика", class="search__select-option") Электрика
+                        //-         option(value="Материалы", class="search__select-option") Материалы
+                        //-     input(type="text", class="search__field", placeholder="Начните вводить нужную категорию ...")
+                        //-     button(class="button search__find", type="submit")
+                        //-         img(src="img/icons/search.svg", alt="Искать")
+                        picture(class="welcome__discount-img-mobile")
+                            source(type="image/webp"  srcset="img/banners/main-page-banner.webp")
+                            img(src="img/banners/main-page-banner.png" alt="Кровля")
+                        div(class="welcome__discount")
+                            .welcome__discount-wrap
+                                h2(class="welcome__discount-title") с нами выгодно строить
+                                button(class="button welcome__discount-btn", data-form="получить прайс") ПОЛУЧИТЬ ПРАЙС
+                            div(class="welcome__discount-img")
+                                picture
+                                    source(type="image/webp"  srcset="img/banners/main-page-banner.webp")
+                                    img(src="img/banners/main-page-banner.png" alt="Кровля")
+                        .welcome__categories
+                            div(class="categories-block__grid-item")
+                                a(href="full-price" class="categories-block__cat-name")
+                                    div(class="categories-block__cat-icon")
+                                        img(src="img/welcome/categories/isolation.svg", alt="Пены, клеи, герметики")
+                                    span(class="categories-block__cat-title")  
+                                        h3 Перейти в прайс лист
+            .short-info.container
+                h2.short-info__title Компания StroySales - поставщик ROCKWOOL® ISOVER®  ПЕНОПЛЕКС ® и других брендов в Санкт-Петербурге и Ленинградской области. С нашей помощью можно приобрести  по низкой цене любые строительные товары.
+            //- include pug/blocks/advantages
+            //- include pug/blocks/products
+            include pug/blocks/products-slider
             include pug/blocks/about
-        include pug/blocks/footer.pug 
+            include pug/blocks/logo-slider
+        include pug/blocks/footer

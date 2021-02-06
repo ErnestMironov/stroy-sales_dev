@@ -1,0 +1,144 @@
+.full-price {
+	padding: 15px 0;
+	&__table {
+		width: 100%;
+		border-collapse: separate;
+		td {
+			padding: 15px;
+			font-size: 15px;
+			line-height: 18px;
+			border: 1px solid #fff;
+			vertical-align: middle;
+
+			@include mobile {
+				padding: 5px 15px;
+			}
+		}
+
+		tr {
+			background: rgba(255, 237, 0, 0.1);
+		}
+
+		tbody {
+			tr.focused {
+				td {
+					background-color: $yellow;
+					font-weight: bold;
+
+					&:hover {
+						&.full-price__buy {
+							background-color: $green;
+
+							svg {
+								path {
+									fill: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+			tr:not([class]) {
+				@include mobile {
+					margin: 20px 0;
+					display: block;
+					background-color: #fff;
+				}
+				@include desktop {
+					&:hover td,
+					&:focus td {
+						background-color: $soft-black;
+						color: #fff;
+
+						&.full-price__buy {
+							background-color: $green;
+
+							svg {
+								path {
+									fill: #fff;
+								}
+							}
+						}
+					}
+				}
+				td {
+					font-size: 14px;
+					@include mobile {
+						display: flex;
+						&:before {
+							content: attr(data-th) ': ';
+							font-weight: bold;
+							width: 40%;
+							margin-right: 15px;
+						}
+						&.full-price__buy {
+							justify-content: center;
+							align-items: center;
+							font-size: 22px;
+							margin-top: 10px;
+							&:before {
+								content: 'ЗАКАЗАТЬ ';
+								width: auto;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&__table-subtitle td {
+		background-color: $yellow;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 13px;
+		color: #2b2a29;
+		width: 100%;
+		position: sticky;
+		top: 0;
+	}
+	&__table-param {
+		@include mobile {
+			display: none;
+		}
+		td {
+			background-color: $soft-black;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			position: sticky;
+			top: 52px;
+			z-index: 2;
+		}
+	}
+	&__table-attr {
+		@include mobile {
+			display: none;
+		}
+		td {
+			background: rgb(239 239 239);
+			position: sticky;
+			top: 100px;
+			z-index: 2;
+		}
+	}
+
+	&__buy {
+		width: 80px;
+		cursor: pointer;
+		text-align: center;
+
+		@include mobile {
+			background-color: $green;
+			width: 100%;
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}

@@ -1,12 +1,8 @@
 header(class='header', id="header")
     div(class="container")
         div(class="header__left")
-            div(class="header__hot" data-form="предложение дня" data-form-type="discount")
-                img(src="img/icons/flame.svg", alt="пламя")
-                b ПРЕДЛОЖЕНИЕ ДНЯ
-                img(src="img/icons/flame.svg", alt="пламя")
             a(class="header__logo", href="/")    
-                img(src="img/icons/logo.png", alt="stroysales")
+                img(src="img/icons/logo.png", alt="stroysales" class="ignore-webp")
         div(class="menu__btn")
             span
             span
@@ -14,17 +10,13 @@ header(class='header', id="header")
         nav(class="header__middle")
             ul(class="menu header__menu")
                 li(class="menu__item")
-                    a(href="header") Главная
+                    a(href="full-price.pug") прайс
                 li(class="menu__item")
-                    a(href="categories") Категории
+                    a(href="/") О нас
                 li(class="menu__item")
-                    a(href="markets") Магазины
+                    a(href="contacts.pug") Контакты
                 li(class="menu__item")
-                    a(href="services") Услуги
-                li(class="menu__item")
-                    a(href="about") О нас
-                li(class="menu__item")
-                    a(href="contacts") Контакты
+                    a(href="delivery.pug") Доставка
         div(class="header__right")
             a(href="tel:8(812)980-17-45", class="header__link header__tel") 8(812)980-17-45
             a(href="mailto:info@stroysales.com", class="header__link header__mail") info@stroysales.com
