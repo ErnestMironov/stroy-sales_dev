@@ -7,8 +7,8 @@
     "scripts": {
         "clean": "rimraf dist",
         "start": "parcel src/index.pug --open",
-        "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
-        "build-prod": "parcel build src/index.pug  --no-content-hash"
+        "build-prod": "parcel build src/index.pug  --no-content-hash",
+        "public-gh": "parcel build src/index.pug --public-url /stroy-sales_dev/  --no-content-hash && gh-pages -d dist"
     },
     "dependencies": {
         "autoprefixer": "^9.8.2",
