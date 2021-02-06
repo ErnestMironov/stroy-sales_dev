@@ -1,130 +1,105 @@
 .header {
-    padding-top: 10px;
-    position: relative;
+	margin-top: 30px;
+	width: 100%;
+	position: relative;
 
-    @include mobile {
-        padding-top: 20px;
-    }
+	&:before {
+		content: '';
+		display: block;
+		width: 100vw;
+		height: 73px;
+		background-color: #fff;
+		top: 50%;
+		left: 0;
+		position: absolute;
+		transform: translate(0, -50%);
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
+		@include tablet {
+			display: none;
+		}
+	}
 
-        @include mobile {
-            background: #fff;
-            flex-wrap: wrap;
-            align-items: flex-end;
-        }
-    }
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    &:before {
-        content: '';
-        background: $yellow;
-        top: 0;
-        left: 40px;
-        width: 130vw;
-        height: 1100px;
-        transform: rotate(-7deg) translateY(-50%);
-        border-bottom-left-radius: 100px;
-        position: absolute;
-        z-index: -1;
+		@include tablet {
+			background: #fff;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
 
-        @include mobile {
-            width: 100vw;
-            left: 0;
-            transform: unset;
-            border-radius: 0;
-            height: 878px;
-        }
-    }
+	&__hot {
+		display: flex;
+		align-items: flex-end;
+		cursor: pointer;
 
-    &__hot {
-        display: flex;
-        align-items: flex-end;
+		@include tablet {
+			margin-top: 8px;
+		}
 
-        @include mobile {
-            margin-top: 8px;
-        }
+		b {
+			font-weight: bold;
+			padding: 0px 9px 2px;
+		}
+	}
 
-        b {
-            font-weight: bold;
-            padding: 0px 9px 2px;
-        }
-    }
+	&__logo {
+		display: block;
+		position: relative;
+		z-index: 1;
 
-    &__logo {
-        display: block;
-        margin-top: 28px;
+		img {
+			max-width: 100%;
+		}
 
-        img {
-            max-width: 100%;
-        }
+		@include tablet {
+			max-width: 50vw;
+		}
+	}
 
-        @include mobile {
-            max-width: 50vw;
-        }
-    }
+	&__middle {
+		flex: auto;
+		padding-left: 57px;
+		position: relative;
 
-    &__middle {
-        flex: auto;
-        padding-left: 57px;
-        margin-bottom: 10px;
-        align-self: flex-end;
-        position: relative;
+		@include tablet {
+			padding-left: 0;
+			width: 100%;
+		}
+	}
 
-        @include mobile {
-            padding-left: 0;
-            margin-top: 20px;
-            width: 100%;
-        }
+	&__right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		z-index: 3;
+		top: 13px;
 
-        &:before {
-            content: '';
-            display: block;
-            border: 42px solid transparent;
-            border-left: 130vw solid #FFF;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            position: absolute;
+		@include tablet {
+			display: none;
+		}
+	}
 
-            @include mobile {
-                display: none;
-            }
-        }
-    }
+	&__link {
+		text-decoration: none;
+		color: inherit;
+	}
 
-    &__right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 5px;
+	&__tel {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 20px;
+	}
 
-        @include mobile {
-            display: none;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    &__tel {
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    &__mail {
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 25px;
-    }
-
-    &__callback {
-        margin-top: 7px;
-    }
+	&__mail {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 25px;
+	}
 }

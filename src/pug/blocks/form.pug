@@ -3,15 +3,15 @@ div(class="form__wrapper form__wrapper_simple")
         img(src="img/icons/times.svg", alt="закрыть", class="form__close")
         h3(class="form__title") 
         div(class="form__actions")
-            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required autofocus)
             input(type="email",name="email", class="form__input", placeholder="E-mail")
-            input(type="tel",name="tel", class="form__input", placeholder="Телефон")
+            input(type="tel",name="tel", class="form__input", placeholder="Телефон", required)
             input(type="text",name="text", class="form__input dinamic-input", placeholder="")
             button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
-            a(href="javascript:;") Пользовательского соглашения 
+            a(href="policy.pug" target="blank") Пользовательского соглашения 
             span и
-            a(href="javascript:;")  Политики конфиденциальности
+            a(href="policy.pug" target="blank")  Политики конфиденциальности
 div(class="form__wrapper form__wrapper_cat")
     form(class="form", id="form-cat", method="POST")
         img(src="img/icons/times.svg", alt="закрыть", class="form__close")
@@ -19,15 +19,82 @@ div(class="form__wrapper form__wrapper_cat")
         div(class="form__cat-name")
             div(class="form__cat-icon")
                 img(src="img/icons/material.svg", alt="Общестроительные материалы")
-            h3(href="javascript:;", class="form__cat-title") Общестроительные материалы
+            h3(class="form__cat-title") Общестроительные материалы
         div(class="form__subcat") 
         div(class="form__actions")
-            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required)
             input(type="email", name="email", class="form__input", placeholder="E-mail")
-            input(type="tel", name="tel", class="form__input", placeholder="Телефон")
+            input(type="tel", name="tel", class="form__input", placeholder="Телефон", required)
             input(type="text", name="text", class="form__input dinamic-input", placeholder="Комментарий")
             button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
-            a(href="javascript:;") Пользовательского соглашения 
+            a(href="policy.pug" target="blank") Пользовательского соглашения 
             span и
-            a(href="javascript:;")  Политики конфиденциальности
+            a(href="policy.pug" target="blank")  Политики конфиденциальности
+div(class="form__wrapper form__wrapper_price")
+    form(class="form", id="form-price", method="POST")
+        img(src="img/icons/times.svg", alt="закрыть", class="form__close")
+        div(class="form__bonus") ПРИОБРЕСТИ
+        div(class="form__cat-name")
+            .form__cat-icon
+                img(src="img/welcome/categories/isolation.svg")
+            h3(class="form__cat-title") ТЕПЛЫЕ СТЕНЫ СТРОНГ - ЦЕНА OT 470P/УП
+        div(class="form__actions")
+            .form__inputs-row
+                input(type="number", name="count", class="form__input", placeholder="Количество", required, min="1", max="999999")
+                select(name="unit")
+                    option(value="м³") м³
+                    option(value="м²") м²
+                    option(value="пог.м") пог.м
+                    option(value="шт") шт
+                    option(value="лист") лист
+                    option(value="рулон") рулон
+                    option(value="упаковка") упаковка
+            input(type="text", name="name", class="form__input", placeholder="Имя", required)
+            input(type="email", name="email", class="form__input", placeholder="E-mail")
+            input(type="tel", name="tel", class="form__input", placeholder="Телефон", required)
+            input(type="text", name="text", class="form__input dinamic-input", placeholder="Комментарий")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
+        div(class="form__politics") Вы принимаете условия 
+            a(href="policy.pug" target="blank") Пользовательского соглашения 
+            span и
+            a(href="policy.pug" target="blank")  Политики конфиденциальности
+div(class="form__wrapper form__wrapper_prod")
+    form(class="form", id="form-prod", method="POST")
+        img(src="img/icons/times.svg", alt="закрыть", class="form__close")
+        div(class="form__bonus") ПРИОБРЕСТИ
+        div(class="form__cat-name")
+            .form__cat-icon
+                picture.products-block__img-wrap
+                    source(type="image/webp" srcset="img/products/7.webp")
+                    img.products-block__img(src="img/products/7.jpg")
+            h3(class="form__cat-title") ТЕПЛЫЕ СТЕНЫ СТРОНГ - ЦЕНА OT 470P/УП
+        div(class="form__actions")
+            input(type="number", name="count", class="form__input", placeholder="Количество", required, min="1", max="999999")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required)
+            input(type="email", name="email", class="form__input", placeholder="E-mail")
+            input(type="tel", name="tel", class="form__input", placeholder="Телефон", required)
+            input(type="text", name="text", class="form__input dinamic-input", placeholder="Комментарий")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
+        div(class="form__politics") Вы принимаете условия 
+            a(href="policy.pug" target="blank") Пользовательского соглашения 
+            span и
+            a(href="policy.pug" target="blank")  Политики конфиденциальности
+div(class="form__wrapper form__wrapper_discount")
+     form(class="form", id="form-discount", method="POST")
+        img(src="img/icons/times.svg", alt="закрыть", class="form__close")
+        div(class="form__header")
+            h3(class="form__title") ПРЕДЛОЖЕНИЕ ДНЯ
+            div(class="form__label-wrap") 
+                img(src="img/icons/brands/Petrovich.png", alt="Петрович" class="form__label")
+                div(class="form__percent") 10%
+        div(class="form__actions")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required autofocus)
+            input(type="email",name="email", class="form__input", placeholder="E-mail")
+            input(type="tel",name="tel", class="form__input", placeholder="Телефон", required)
+            input(type="text",name="text", class="form__input dinamic-input", placeholder="")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
+        div(class="form__politics") Вы принимаете условия 
+            a(href="policy.pug" target="blank") Пользовательского соглашения 
+            span и
+            a(href="policy.pug" target="blank")  Политики конфиденциальности

@@ -1,0 +1,105 @@
+.product-card {
+	&__img {
+		display: block;
+		border: 3px solid $yellow;
+		border-radius: 25px 25px 0 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+		position: relative;
+		picture {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		img {
+			position: relative;
+			top: 10%;
+			left: 10%;
+			width: 80%;
+			height: 80%;
+			object-position: center;
+			object-fit: contain;
+		}
+	}
+	&__title {
+		margin-top: 5px;
+		padding: 10px 15px;
+		background-color: $yellow;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.3;
+		text-align: center;
+
+		@include mobile {
+			font-size: 16px;
+		}
+		b {
+			display: block;
+			font-weight: 900;
+			font-size: 30px;
+			line-height: 1.2;
+
+			@include mobile {
+				font-size: 22px;
+			}
+		}
+	}
+	&__char-list {
+		margin-top: 5px;
+		padding: 13px 30px 13px 22px;
+		background-color: $soft-black;
+	}
+
+	&__char-item {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 9px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 18px;
+		color: #ffffff;
+	}
+
+	&__char {
+		max-width: 60%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__dotted {
+		border-bottom: 1px dotted $yellow;
+		position: relative;
+		bottom: 3px;
+		margin: 0 4px;
+		flex: 1 10px;
+	}
+
+	&__char-val {
+		font-weight: bold;
+	}
+
+	&__price {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+		position: relative;
+
+		&::after {
+			content: '₽';
+			font-size: 15px;
+			line-height: 18px;
+			color: $yellow;
+			position: absolute;
+			bottom: 2px;
+			left: calc(100% + 5px);
+		}
+	}
+	&__btn {
+		border-radius: 0;
+		width: 100%;
+		margin-top: 5px;
+	}
+}

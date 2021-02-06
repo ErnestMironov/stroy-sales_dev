@@ -1,0 +1,140 @@
+-
+    var products = [
+        {
+            img: '1',
+            brand:'ROCKWOOL', 
+            prod_name: 'Лайт Баттс Скандик',
+            length: '800 мм',
+            width: '600 мм',
+            thickness: '50 мм', 
+            price_1: '1875', 
+            price_2: '540' 
+        },
+        {
+            img: '2',
+            brand:'ROCKWOOL', 
+            prod_name: 'Лайт Баттс',
+            length: '1000 мм',
+            width: '600 мм',
+            thickness: '50 мм',
+            price_1: '2466', 
+            price_2: '740'  
+        },
+        {
+            img: '3',
+            brand:'ISOVER', 
+            prod_name: 'Теплые стены стронг',
+            length: '1000 мм',
+            width: '610 мм',
+            thickness: '50 мм',
+            price_1: '1639', 
+            price_2: '499'  
+        },
+        {
+            img: '4',
+            brand:'ROCKWOOL', 
+            prod_name: 'Лайт Баттс Скандик XL',
+            length: '1170 мм',
+            width: '610 мм',
+            thickness: '50 мм',
+            price_1: '1440', 
+            price_2: '720'  
+        },
+        {
+            img: '5',
+            brand:'ROCKWOOL', 
+            prod_name: 'Рокфасад',
+            length: '1000 мм',
+            width: '600 мм',
+            thickness: '50 мм',
+            price_1: '5584', 
+            price_2: '670'  
+        },
+        {
+            img: '6',
+            brand:'ПЕНОПЛЕКС', 
+            prod_name: 'Пеноплэкс комфорт',
+            length: '1185 мм',
+            width: '585 мм',
+            thickness: '50 мм',
+            price_1: '4280', 
+            price_2: '1040'  
+        },
+        {
+            img: '7',
+            brand:'ПЕНОПЛЕКС', 
+            prod_name: 'Пеноплэкс фундамент',
+            length: '1185 мм',
+            width: '585 мм',
+            thickness: '50 мм',
+            price_1: '4938', 
+            price_2: '1210'  
+        },
+        {
+            img: '8',
+            brand:'ISOVER', 
+            prod_name: 'ПАРАНЕТ (B)',
+            length: '1,5 м',
+            width: '47 м',
+            thickness: '70м2',
+            price_1: '-', 
+            price_2: '1290'  
+        }, 
+        {
+            img: '9',
+            brand:'ISOVER', 
+            prod_name: 'ГИДРАНЕТ (D)',
+            length: '1,5 м',
+            width: '47 м',
+            thickness: '70м2',
+            price_1: '-', 
+            price_2: '1670'  
+        },
+    ];
+.products-slider
+    .subtitle.subtitle_bg_yellow
+            .container
+                .subtitle__title Популярные товары
+                .subtitle__txt Наш каталог официальной продукции от производителей isover / Weber / Gyproc
+    .container
+        .swiper-button-prev
+            img(src="img/icons/angle_left.svg", alt="alt")
+        .swiper-button-next
+            img(src="img/icons/angle_right.svg", alt="alt")
+        .swiper-container
+            .swiper-wrapper
+                each val, index in products
+                    article.swiper-slide
+                        .product-card( data-ppslide=`#pp-slide${index + 1}`)
+                            a(href="full-price.pug").product-card__img
+                                picture
+                                    source(type="image/webp"  srcset=`img/products/slider/${val.img}.webp`)
+                                    img(src=`img/products/slider/${val.img}.jpg` alt="вся линейка продукции ISOVER по индивидуальным ценам" loading="lazy")
+                            h3.product-card__title
+                                b #{val.brand}
+                                |#{val.prod_name}
+                            ul(class="product-card__char-list")
+                                    li(class="product-card__char-item")
+                                        span(class="product-card__char" title="Длина") Длина
+                                        span(class="product-card__dotted")
+                                        span(class="product-card__char-val") #{val.length}
+                                    li(class="product-card__char-item")
+                                        span(class="product-card__char" title="ширина") Ширина
+                                        span(class="product-card__dotted")
+                                        span(class="product-card__char-val") #{val.width}
+                                    li(class="product-card__char-item")
+                                        span(class="product-card__char" title="толщина") Толщина
+                                        span(class="product-card__dotted")
+                                        span(class="product-card__char-val") #{val.thickness}
+                            ul(class="product-card__char-list")
+                                    li(class="product-card__char-item")
+                                        span(class="product-card__char" title="Цена за м³") Цена за м³
+                                        span(class="product-card__dotted")
+                                        span(class="product-card__char-val")
+                                            span(class="product-card__price") #{val.price_1}
+                                    li(class="product-card__char-item")
+                                        span(class="product-card__char" title="Цена за упаковку") Цена за упаковку
+                                        span(class="product-card__dotted")
+                                        span(class="product-card__char-val") 
+                                            span(class="product-card__price") #{val.price_2}
+                            a.button.product-card__btn(href=`full-price.pug`) ПЕРЕЙТИ В ПРАЙС
