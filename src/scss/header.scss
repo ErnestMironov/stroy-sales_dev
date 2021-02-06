@@ -2,7 +2,7 @@
     padding-top: 10px;
     position: relative;
 
-    @include mobile {
+    @include tablet {
         padding-top: 20px;
     }
 
@@ -11,7 +11,7 @@
         justify-content: space-between;
         align-items: stretch;
 
-        @include mobile {
+        @include tablet {
             background: #fff;
             flex-wrap: wrap;
             align-items: flex-end;
@@ -24,26 +24,27 @@
         top: 0;
         left: 40px;
         width: 130vw;
-        height: 1100px;
+        height: 1180px;
         transform: rotate(-7deg) translateY(-50%);
         border-bottom-left-radius: 100px;
         position: absolute;
         z-index: -1;
 
-        @include mobile {
+        @include tablet {
             width: 100vw;
             left: 0;
             transform: unset;
             border-radius: 0;
-            height: 878px;
+            height: 928px;
         }
     }
 
     &__hot {
         display: flex;
         align-items: flex-end;
+        cursor: pointer;
 
-        @include mobile {
+        @include tablet {
             margin-top: 8px;
         }
 
@@ -61,7 +62,7 @@
             max-width: 100%;
         }
 
-        @include mobile {
+        @include tablet {
             max-width: 50vw;
         }
     }
@@ -73,7 +74,7 @@
         align-self: flex-end;
         position: relative;
 
-        @include mobile {
+        @include tablet {
             padding-left: 0;
             margin-top: 20px;
             width: 100%;
@@ -90,7 +91,7 @@
             z-index: -1;
             position: absolute;
 
-            @include mobile {
+            @include tablet {
                 display: none;
             }
         }
@@ -102,7 +103,7 @@
         align-items: center;
         padding-top: 5px;
 
-        @include mobile {
+        @include tablet {
             display: none;
         }
     }

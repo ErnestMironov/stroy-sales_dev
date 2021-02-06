@@ -24,16 +24,32 @@ html(lang="en")
                     //-     input(type="text", class="search__field", placeholder="Начните вводить нужную категорию ...")
                     //-     button(class="button search__find", type="submit")
                     //-         img(src="img/icons/search.svg", alt="Искать")
+                    picture(class="welcome__discount-img-mobile")
+                        source(type="image/webp"  srcset="img/banners/turtle_mobile.webp")
+                        img(src="img/banners/turtle_mobile.png" alt="Кровля")
                     div(class="welcome__discount")
-                        h2(class="welcome__discount-title") ДОПОЛНИТЕЛЬНАЯ СКИДКА 
-                        span(class="welcome__discount-txt") НА СТРОЙМАТЕРИАЛЫ
-                            b(class="welcome__discount-bold-txt")  ВЕСЬ АВГУСТ
-                        button(class="button welcome__discount-btn", data-form="Акция августа") ХОЧУ СКИДКУ
+                        div(class="welcome__discount-img")
+                            picture(class="welcome__discount-img-shard")
+                                source(type="image/webp"  srcset="img/banners/turtle_black.webp")
+                                img(src="img/banners/turtle_black.png" alt="Кровля")
+                            picture(class="welcome__discount-img-shard")
+                                source(type="image/webp"  srcset="img/banners/turtle_red.webp")
+                                img(src="img/banners/turtle_red.png" alt="Кровля")
+                            picture(class="welcome__discount-img-shard")
+                                source(type="image/webp"  srcset="img/banners/turtle_grey.webp")
+                                img(src="img/banners/turtle_grey.png" alt="Кровля")
+                        h2(class="welcome__discount-title") ДАЁМ МАКСИМАЛЬНУЮ СКИДКУ НА ВСЮ КРОВЛЮ
+                        span(class="welcome__discount-txt") Не верите, что можно дешевле?
+                            b(class="welcome__discount-bold-txt")  ВЕСЬ СЕНТЯБРЬ
+                        div(class="welcome__discount-btn-wrap")
+                            button(class="button welcome__discount-btn welcome__discount-btn_skeptic", data-form="Не верите нашим ценам?") ДЛЯ СКЕПТИКОВ
+                            button(class="button welcome__discount-btn", data-form="Акция сентября") ХОЧУ СКИДКУ
                     div(class="welcome__footer-txt") Подбор стройматериалов, мебели и электроинструментов стал простым и выгодным. <br>
                         span(class="welcome__txt-info") *Гарантированная скидка на любой раздел на сайте, финальная скидка согласовывается по запросу. <br>
-                        span(class="welcome__txt-info") **Для прорабов и фирм действует особое предложение! Уточняйте по телефону или в форме.
-                div(class="welcome__instruments")
-                    img(src="img/icons/instruments.svg", alt="видео о компании")
+                        span(class="welcome__txt-info") **Для прорабов и фирм действует особое предложение! Уточняйте по телефону или в форме.<br>
+                        span(class="welcome__txt-info") ***Для тех, кто думает, что мы не сможем дешевле, чем они закупаются.
+                //- div(class="welcome__instruments")
+                //-     img(src="img/icons/instruments.svg", alt="видео о компании")
             include pug/blocks/categories
             include pug/blocks/markets
             include pug/blocks/services

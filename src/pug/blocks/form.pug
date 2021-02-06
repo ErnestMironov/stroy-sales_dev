@@ -3,9 +3,9 @@ div(class="form__wrapper form__wrapper_simple")
         img(src="img/icons/times.svg", alt="закрыть", class="form__close")
         h3(class="form__title") 
         div(class="form__actions")
-            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required autofocus)
             input(type="email",name="email", class="form__input", placeholder="E-mail")
-            input(type="tel",name="tel", class="form__input", placeholder="Телефон")
+            input(type="tel",name="tel", class="form__input", placeholder="Телефон", required)
             input(type="text",name="text", class="form__input dinamic-input", placeholder="")
             button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
@@ -19,13 +19,31 @@ div(class="form__wrapper form__wrapper_cat")
         div(class="form__cat-name")
             div(class="form__cat-icon")
                 img(src="img/icons/material.svg", alt="Общестроительные материалы")
-            h3(href="javascript:;", class="form__cat-title") Общестроительные материалы
+            h3(class="form__cat-title") Общестроительные материалы
         div(class="form__subcat") 
         div(class="form__actions")
-            input(type="text", name="name", class="form__input", placeholder="Имя")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required)
             input(type="email", name="email", class="form__input", placeholder="E-mail")
-            input(type="tel", name="tel", class="form__input", placeholder="Телефон")
+            input(type="tel", name="tel", class="form__input", placeholder="Телефон", required)
             input(type="text", name="text", class="form__input dinamic-input", placeholder="Комментарий")
+            button(class="form__submit", type="submit") ОТПРАВИТЬ
+        div(class="form__politics") Вы принимаете условия 
+            a(href="javascript:;") Пользовательского соглашения 
+            span и
+            a(href="javascript:;")  Политики конфиденциальности
+div(class="form__wrapper form__wrapper_discount")
+     form(class="form", id="form-discount", method="POST")
+        img(src="img/icons/times.svg", alt="закрыть", class="form__close")
+        div(class="form__header")
+            h3(class="form__title") ПРЕДЛОЖЕНИЕ ДНЯ
+            div(class="form__label-wrap") 
+                img(src="img/icons/brands/Petrovich.png", alt="Петрович" class="form__label")
+                div(class="form__percent") 10%
+        div(class="form__actions")
+            input(type="text", name="name", class="form__input", placeholder="Имя", required autofocus)
+            input(type="email",name="email", class="form__input", placeholder="E-mail")
+            input(type="tel",name="tel", class="form__input", placeholder="Телефон", required)
+            input(type="text",name="text", class="form__input dinamic-input", placeholder="")
             button(class="form__submit", type="submit") ОТПРАВИТЬ
         div(class="form__politics") Вы принимаете условия 
             a(href="javascript:;") Пользовательского соглашения 

@@ -7,19 +7,26 @@
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         grid-gap: 5px 20px;
         margin-top: 16px;
 
         @include mobile {
-           padding-right: 0;
+            padding-right: 0;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         }
 
         &_short {
             .categories-block__grid-item:nth-of-type(n+10) {
                 display: none;
             }
-            
+
+            @include tablet {
+                .categories-block__grid-item:nth-of-type(n+7) {
+                    display: none;
+                }
+            }
+
             @include mobile {
                 .categories-block__grid-item:nth-of-type(n+4) {
                     display: none;
@@ -50,7 +57,7 @@
         z-index: 1;
         transition: all ease-out .18s;
 
-        @include mobile{
+        @include mobile {
             width: 80px;
             height: 80px;
             min-width: 80px;

@@ -2,7 +2,10 @@ import pasteSVG from '../src/js/libs/pasteSvg';
 var categories = require('../src/js/custom/categories');
 var menu = require('../src/js/custom/menu');
 var form = require('../src/js/custom/form');
-import Swiper from 'swiper';
+import Swiper, {
+    Navigation
+} from 'swiper';
+Swiper.use([Navigation]);
 import 'swiper/swiper-bundle.css';
 
 
@@ -11,20 +14,27 @@ $(document).ready(function () {
     menu.menu();
     form.form();
     pasteSVG();
-    $('.js-example-basic-single').select2({
-        width: 'style'
-    });
+
 
     var marketsSlider = new Swiper('.markets-block__slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        centeredSlides: true,
+        slidesPerView: 1,
         loop: true,
-        observer: true,
-        observeParents: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 45,
+            },
+            700: {
+                slidesPerView: 3,
+                spaceBetween: 45,
+                slidesOffsetBefore: 60,
+                slidesOffsetAfter: 60,
+            }
         }
         // on: {
         //     init: () => {
@@ -38,7 +48,7 @@ $(document).ready(function () {
 
     });
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {} else {
+    if (screen.width > 600) {
         marketsSlider.destroy(true, true)
         $(".swiper-container").find(".swiper-wrapper").removeClass("swiper-wrapper");
     }

@@ -14,20 +14,27 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    max-width: 100vw;
 }
+
 .container {
     max-width: 1150px;
     display: block;
     margin: auto;
 
-    @include mobile {
-        padding: 0 20px;
-    }
-
     @include container {
         padding-left: 25px;
         padding-right: 25px;
     }
+
+    @include tablet {
+        padding: 0 30px;
+    }
+
+    @include mobile {
+        padding: 0 20px;
+    }
+
 }
 
 @import 'scss/button.scss';

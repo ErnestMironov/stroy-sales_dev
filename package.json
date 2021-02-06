@@ -7,7 +7,8 @@
   "scripts": {
     "clean": "rm dist",
     "start": "parcel src/index.pug --open",
-    "build-prod": "parcel build src/index.pug --public-url /stroy-sales_dev/dist --no-content-hash"
+    "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
+    "build-prod": "parcel build src/index.pug  --no-content-hash"
   },
   "dependencies": {
     "autoprefixer": "^9.8.2",
@@ -17,6 +18,7 @@
     "postcss-modules": "^2.0.0"
   },
   "devDependencies": {
+    "inputmask": "^5.0.5",
     "parcel-bundler": "latest",
     "parcel-plugin-clean-dist": "0.0.6",
     "pug": "^3.0.0",

@@ -2,7 +2,8 @@ const menu = function() {
     $(".menu, .footer__menu").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
-            top = $("#" + id).offset().top;
+        top = $("#" + id).offset().top;
+        history.pushState(null, null, `/#${id}`);
         $('body,html').animate({scrollTop: top}, 500);
     });
 

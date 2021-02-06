@@ -6,17 +6,38 @@ $txt-offset: 20px;
     display: flex;
     justify-content: space-between;
 
-    @include mobile {
+    @include container {
+        display: block;
+    }
+
+    @include tablet {
         display: block;
         margin-top: 25px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__instruments {
         margin-left: 26px;
         transition: ease-out .2s;
 
-        @include mobile {
+        @include container {
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        @include tablet {
             margin-left: 0;
+            margin-top: 20px;
+            text-align: center;
         }
 
         img {
@@ -30,11 +51,11 @@ $txt-offset: 20px;
 
     &__title {
         font-weight: 600;
-        font-size: 3.4rem;
-        line-height: 64px;
+        font-size: 45px;
+        line-height: 54px;
         padding-top: 10px;
 
-        @include mobile {
+        @include tablet {
             font-size: 28px;
             line-height: 28px;
             text-align: center;
@@ -45,10 +66,9 @@ $txt-offset: 20px;
         display: block;
         font-weight: 400;
         padding-left: 70px;
-        margin-top: 20px;
         display: block;
 
-        @include mobile {
+        @include tablet {
             padding: 0;
             font-size: 22px;
         }
@@ -67,7 +87,7 @@ $txt-offset: 20px;
             font-family: Tahoma;
             font-style: italic;
 
-            @include mobile {
+            @include tablet {
                 padding: 0;
                 font-size: 14px;
             }
@@ -85,9 +105,8 @@ $txt-offset: 20px;
         font-weight: normal;
         font-size: 20px;
         line-height: 24px;
-        padding-left: $txt-offset;
 
-        @include mobile {
+        @include tablet {
             padding: 0;
             font-size: 14px;
             line-height: 14px;
@@ -96,12 +115,12 @@ $txt-offset: 20px;
 
     &__footer-txt {
         padding-left: $txt-offset;
-        margin-top: 15px;
+        margin-top: 42px;
         margin-bottom: 4px;
         font-size: 16px;
         line-height: 19px;
 
-        @include mobile {
+        @include tablet {
             padding: 0;
             font-size: 14px;
             line-height: 14px;
@@ -117,17 +136,29 @@ $txt-offset: 20px;
     }
 
     &__discount {
-        padding: 15px 23px;
+        padding: 15px 23px 29px;
         border-radius: 0px 50px;
         background: #C8281C;
         color: #FFF;
         display: inline-flex;
         flex-direction: column;
         position: relative;
-        margin-left: $txt-offset;
         margin-bottom: 12px;
+        max-width: 967px;
 
-        @include mobile {
+        &:hover {
+            .welcome__discount-img-shard {
+                &:first-child {
+                    transform: translateY(15px);
+                }
+
+                &:last-child {
+                    transform: translateY(-15px);
+                }
+            }
+        }
+
+        @include tablet {
             margin: 0;
             margin-top: 10px;
             padding-bottom: 30px;
@@ -137,21 +168,29 @@ $txt-offset: 20px;
     &__discount-title {
         font-weight: bold;
         font-size: 38px;
+        position: relative;
+        z-index: 2;
+        white-space: nowrap;
 
-        @include mobile {
+        @include container {
+            font-size: 32px;
+        }
+
+        @include tablet {
             font-size: 22px;
+            white-space: normal;
         }
     }
 
     &__discount-txt {
-        font-weight: normal;
-        font-size: 22px;
-        line-height: 20px;
-        margin-top: 4px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 19px;
+        margin-top: 21px;
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
 
-        @include mobile {
+        @include tablet {
             flex-wrap: wrap;
             font-size: 18px;
         }
@@ -161,27 +200,130 @@ $txt-offset: 20px;
         font-size: 35px;
         line-height: 24px;
         color: $yellow;
-        margin-left: 9px;
+        margin-left: 71px;
+        position: relative;
+        z-index: 2;
 
-        @include mobile {
+        @include tablet {
             margin-left: 0;
             font-size: 20px;
         }
     }
 
-    &__discount-btn {
+    &__discount-btn-wrap {
         position: absolute;
-        right: -60px;
+        left: 341px;
         bottom: 0;
         transform: translateY(50%);
+
+        @include tablet {
+            position: relative;
+            left: 0;
+            transform: none;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__discount-btn {
         animation: discount-pulse 5s 0s ease-in-out infinite;
-        
+        box-shadow: unset;
+        position: relative;
+
         @include mobile {
-            right: calc(50% - 90px);
-            bottom: -19.5px;
-            transform: unset;
-            width: 180px;
-            animation: discount-pulse_mobile 5s 0s ease-in-out infinite;
+            width: 100%;
+        }
+
+        &_skeptic {
+            background-color: $blue;
+            animation: discount-pulse_blue 5s 1s ease-in-out infinite;
+
+            &:before {
+                content: url("data:image/svg+xml,%3Csvg width='84' height='40' viewBox='0 0 84 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 20C57.5933 0.0887432 36.2848 -2.38851 1 10.5C32.3622 1.46427 48.568 1.04675 71 22C65.9914 20.1502 60.8608 19.4086 48.5 18.5C65.2032 22.4005 73.214 26.1289 83 38C82.3633 23.5342 81.4324 15.2836 79.5 0.5L79.5012 0.648632C79.5744 9.96491 79.6156 15.2109 78 20Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A");
+                position: absolute;
+                left: -35px;
+                top: 0;
+                transform: translateY(-81%);
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            &:after {
+                content: "⁎⁎⁎";
+                position: absolute;
+                top: -5px;
+                right: 10px;
+                font-size: 10px;
+                font-family: Tahoma;
+                font-style: italic;
+            }
+        }
+
+        &:last-of-type {
+            margin-left: 30px;
+
+            @include tablet {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__discount-img {
+        position: absolute;
+        z-index: 1;
+        left: 710px;
+        top: -164px;
+        width: 446px;
+        height: 367px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__discount-img-mobile {
+        max-width: 100%;
+
+        @include desktop {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__discount-img-shard {
+        position: absolute;
+        transition: all 0.18s linear;
+
+        img {
+            max-width: 100%;
+        }
+
+        &:first-of-type {
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        &:nth-of-type(2) {
+            top: 50%;
+            left: 0;
+            z-index: 2;
+            transform: translateY(-50%);
+
+        }
+
+        &:last-of-type {
+            bottom: 0;
+            left: 0;
+            z-index: 1;
         }
     }
 }
@@ -251,25 +393,33 @@ $txt-offset: 20px;
     0%,
     20%,
     40% {
-        transform: scale(1) translateY(50%);
+        box-shadow: 0 0 0 5px rgba(36, 161, 10, 0.4);
     }
 
     10%,
     30% {
-        transform: scale(1.1) translateY(50%);
+        box-shadow: 0 0 0 10px rgba(36, 161, 10, 0.4), 0 0 0 20px rgba(36, 161, 10, 0.2), 0 0 0 30px rgba(36, 161, 10, 0.1);
+    }
+
+    50% {
+        box-shadow: unset;
     }
 }
 
-@keyframes discount-pulse_mobile {
+@keyframes discount-pulse_blue {
 
     0%,
     20%,
     40% {
-        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(33, 10, 161, 0.4);
     }
 
     10%,
     30% {
-        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(33, 10, 161, 0.4), 0 0 0 20px rgba(33, 10, 161, 0.2), 0 0 0 30px rgba(33, 10, 161, 0.1);
+    }
+
+    50% {
+        box-shadow: unset;
     }
 }

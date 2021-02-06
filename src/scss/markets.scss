@@ -4,19 +4,27 @@
     &__grid {
         margin-top: 73px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         justify-content: space-between;
         grid-gap: 45px 40px;
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         @include mobile {
             margin-top: 0;
             padding: 0;
+            grid-gap: 0;
+            justify-content: flex-start;
         }
     }
 
     &__slider {
+
         @include mobile {
             margin-top: 40px;
+            width: 100%;
 
             .swiper-slide {
                 padding: 10px 0;
@@ -25,12 +33,28 @@
                 justify-content: center;
             }
         }
+
+        @media screen and (min-width: 400px) {
+            .swiper-slide {
+                @include mobile {
+                    display: flex;
+                }
+
+                &-active {
+                    justify-content: flex-end;
+                }
+
+                &-next {
+                    justify-content: flex-start;
+                }
+            }
+        }
     }
-    
+
     &__nav {
         display: none;
 
-        @include tablet {
+        @include mobile {
             display: block;
         }
     }
@@ -38,9 +62,6 @@
     &__arrow {
         min-width: 50px;
         min-height: 50px;
-        border-radius: 50%;
-        background-color: #fff;
-        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.075);
 
         &:after {
             transform: scale(.6);
@@ -67,6 +88,7 @@
             align-items: center;
             justify-content: center;
         }
+
     }
 
     &__percent {
@@ -111,5 +133,9 @@
     &__more {
         margin: 64px auto 0;
         display: block;
+
+        @include mobile {
+            margin: 34px auto 0;
+        }
     }
 }
